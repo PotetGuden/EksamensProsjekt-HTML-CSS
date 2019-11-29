@@ -18,33 +18,33 @@ Hvis du som ser på denne oppgaven og kjører den, så vil fonten vi brukte bli 
 // DET VAR OGSÅ SPESIFISERT HVILKE TAGS OG CSS EGENSKAPER, SOM GJORDE NOEN TING MER UTFORDRENDE SE UNDER!
 
 //TILLATTE HTML-TAGGER
-  html, head, body, title, meta, link
-  header, main, nav, section, article, footer
-  div
-  h1-h6, p, span
-  ul, ol, li
-  a
-  label med input
-  img
-  map, area
-  audio og/eller iframe for å ha med lyd
+html, head, body, title, meta, link
+header, main, nav, section, article, footer
+div
+h1-h6, p, span
+ul, ol, li
+a
+label med input
+img
+map, area
+audio og/eller iframe for å ha med lyd
 
 //TILLATTE CSS-EGENSKAPER*
-  position, left, right, bottom, top, z-index
-  transition, animation
-  padding, border og margin 
-  width, height, min-width, min-height
-  background 
-  color, font-family, font-size, text-align, text-decoration
-  display
-  overflow
-  cursor
-  transform
-  opacity
-  cursor
-  filter, box-shadow
-  box-sizing
-  *Inkluderer alle variasjoner av egenskapene, for eksempel padding-left, background-size osv.
+position, left, right, bottom, top, z-index
+transition, animation
+padding, border og margin 
+width, height, min-width, min-height
+background 
+color, font-family, font-size, text-align, text-decoration
+display
+overflow
+cursor
+transform
+opacity
+cursor
+filter, box-shadow
+box-sizing
+*Inkluderer alle variasjoner av egenskapene, for eksempel padding-left, background-size osv.
 
 //Tillatte CSS-velgere
   Alle velgere er tillatt
