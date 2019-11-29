@@ -1,0 +1,1360 @@
+/* KODET AV JOSTEIN ERIKSEN (skulle vært en annen) */
+
+body{
+  background-color: rgb(22, 48, 48);
+}
+
+/* Hoved container */
+
+#main-container {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    background-image: linear-gradient(20deg, #24243e, #000000);
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+/* tekts bobler */
+
+.text-bubbles{
+  position: absolute;
+  background-color:white;
+  border-radius: 10px;
+  filter: drop-shadow(4px 5px 6px);
+  font-family: fantasy;
+  text-align: center;
+  padding: 5px;
+  width: 120px;
+}
+
+#text1{
+  position: absolute;
+  top: -60px;
+  left: 60px;
+  transform: rotate(-25deg);
+  animation: text1Disappear 1s linear forwards;
+  animation-delay: 3s;
+}
+
+#text2{
+  position: absolute;
+  top: -70px;
+  left: 60px;
+  transform: rotate(-25deg);
+  animation: text2Appear 2s linear forwards;
+  animation-delay: 4.3s;
+  opacity: 0;
+}
+
+#text3{
+  position: absolute;
+  top: -70px;
+  left: 70px;
+  transform: rotate(-25deg);
+  animation: text3Appear 1s linear forwards;
+  animation-delay: 7.5s;
+  opacity: 0;
+}
+
+
+/* forskjellige planeter og objekter */
+
+#sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -100px; 
+    margin-left: -100px;
+    border-color: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0 0 128px red;
+    background: rgb(222, 133, 0);
+    z-index: 2;
+}
+
+
+
+#planet {
+    
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border-color: blue;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+    background: lightblue;
+}
+
+
+.star:after {
+  position:absolute;
+  top:0px;
+  left:4px;
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px; 
+  transform:rotate(-45deg) ;
+  transform-origin:0% 100%;
+  animation:shooting-ani 2s  ease-out;
+  animation-direction: normal;
+}
+
+#planet-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 500px;
+  margin-top: -250px;
+  margin-left: -250px;
+  border-width: 0px;
+  border-style: dotted;
+  border-color: white;
+  border-radius: 50%;
+  animation: spin-right 10s linear infinite;
+}
+
+#moon-orbit2 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 16px 0px rgba(255, 255, 255, .6);
+  background: lightgray;
+}
+
+#moon-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 80px;
+  margin-top: -288px;
+  margin-left: -45px;
+  border-width: 0px;
+  border-style: dotted;
+  border-color: white;
+  border-radius: 50%;
+  animation: spin-right 10s linear infinite;
+}
+
+
+
+.object_astronaut{
+    animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut{
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    will-change: transform;
+    animation: move-astronaut 50s infinite linear both alternate;
+}
+
+
+
+#moon {
+  position: absolute;
+  left: 88%;
+  top: 78%;
+  margin: -100px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(60deg, #b0bcc4, #2d4053);
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px grey;
+  border: 1px solid grey;
+  transform: rotate(-60deg);
+  z-index: 1;
+}
+
+#alien{
+  width: 60px;
+  height: 110px;
+  background: transparent;
+  position: absolute;
+  left: 1150px;
+  top: 500px;
+ 
+}
+
+
+#alien-body{
+  width: 20px;
+  height: 50px;
+  background: rgb(161, 230, 83);
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  border-radius: 35%;
+}
+
+#alien-head{
+  width: 40px;
+  height: 40px;
+  background: rgb(161, 230, 83);
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+#alien-eye1{
+  width: 9px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  transform: rotate(-30deg);
+}
+
+#alien-eye2{
+  width: 9px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 25px;
+  transform: rotate(30deg);
+}
+
+#alien-smile{
+  width: 15px;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: 28px;
+  left: 22px;
+}
+
+#alien-left-arm{
+  width: 30px;
+  height: 10px;
+  background: rgb(161, 230, 83);
+  position: absolute;
+  top: 40px;
+  border-radius: 35%;
+}
+
+#alien-left-arm2{
+  width: 30px;
+  height: 10px;
+  background: rgb(161, 230, 83);
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  border-radius: 35%;
+  transform: rotate(50deg);
+
+}
+
+#finger1{
+  width: 15px;
+  height: 3px;
+  background: rgb(161, 230, 83);
+  position: absolute;
+  left: -10px;
+  top: -2px;
+  transform: rotate(25deg);
+  border-radius: 35%;
+}
+
+#finger2{
+  width: 15px;
+  height: 3px;
+  background: rgb(161, 230, 83);
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  transform: rotate(-10deg);
+  border-radius: 35%;
+}
+#alien-gun-laser{
+  width: 250px;
+  height: 5px;
+  background: blue;
+  position: absolute;
+  transform: rotate(55deg);
+  top: 280px;
+  left: 930px;
+  opacity: 0;
+}
+
+
+#alien-gun{
+  left: 1138px;
+  top: 390px;
+  position: absolute;
+  transform: rotate(55deg);
+  opacity: 0;
+}
+#part1{
+  width: 35px;
+  height: 12px;
+  border-radius: 30%;
+  background: grey;
+  position: absolute;
+}
+#part2{
+  width: 43px;
+  height: 3px;
+  background:rgb(66, 70, 66);
+  position: absolute;
+  top: 5px;
+  left: -8px;
+}
+
+#part3{
+  width: 6px;
+  height: 6px;
+  background:rgb(119, 128, 119);
+  position: absolute;
+  top: 4px;
+  left: -11px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 3px rgb(50, 50, 197);
+}
+
+#part4{
+  width: 10px;
+  height: 20px;
+  background:rgb(34, 36, 34);
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+#part5{
+  width: 4px;
+  height: 13px;
+  background: rgb(184, 69, 69);
+  border-radius: 30%;
+  position: absolute;
+  top: px;
+  left: 5px;
+}
+
+/* Detaljer til månen */
+
+.moon-circles {
+  position: absolute;
+  list-style: none;
+  background: linear-gradient( #bdc3c7, #344455);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+.moon-circles:nth-child(1) {
+  left: 45px;
+  top: 70px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 6px -2px 0 0px #414043;
+}
+.moon-circles:nth-child(2) {
+  left: 150px;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+.moon-circles:nth-child(3) {
+  left: 130px;
+  top: 180px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+.moon-circles:nth-child(4) {
+  left: 50px;
+  top: 230px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon-circles:nth-child(5) {
+  left: 110.5px;
+  top: 56.66666667px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon-circles:nth-child(6) {
+  left: 114.28571429px;
+  top: 138px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon-circles:nth-child(7) {
+  left: 201.81818182px;
+  top: 150px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+#earth{
+  width:100px;
+  height: 100px;
+  position: absolute;
+  background: linear-gradient(-35deg, #89f1b3, #0575e6);
+  border-radius: 50%;
+  top: 150px;
+  left: 250px;
+  box-shadow: 0 0 10px 5px snow;
+  border: 1px solid black;
+  overflow: hidden;
+  animation: earthSpin 60s linear infinite;
+}
+
+
+#green-land1{
+  width: 35px;
+  height: 35px;
+  background: rgb(70, 155, 70);
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  border-radius: 40%;
+  border: 1px solid black;
+}
+
+#green-land2{
+  width: 25px;
+  height: 45px;
+  background: rgb(70, 155, 70);
+  position: absolute;
+  border-radius: 40%;
+  left: 50px;
+  top: -10px;
+  transform: rotate(-20deg);
+  border: 1px solid black;
+}
+
+
+#green-land3{
+  width: 45px;
+  height: 45px;
+  background: rgb(70, 155, 70);
+  position: absolute;
+  border-radius: 40%;
+  left: 65px;
+  top: 45px;
+  transform: rotate(90deg);
+  border: 1px solid black;
+}
+
+#green-land4{
+  width: 45px;
+  height: 25px;
+  background: rgb(70, 155, 70);
+  position: absolute;
+  border-radius: 40%;
+  left: 0px;
+  top: 75px;
+  transform: rotate(60deg);
+  border: 1px solid black;
+}
+
+#whole-rocket{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: -60px;
+  left: -75px;
+  animation: rocketAnimation 30s linear infinite;
+  
+}
+
+
+#rocket-frame{
+  width: 40px;
+  height: 100px;
+  background: orange;
+  position: absolute;
+  transform: rotate(45deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border:1px solid black;
+  box-shadow: 0 0 5px 2px white;
+}
+
+#rocket-wing1{
+  width: 20px;
+  height: 40px;
+  background:rgb(67, 208, 233);
+  position: absolute;
+  transform: rotate(45deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  top: 45px;
+  left:-30px;
+  border: 1px solid black;
+}
+
+#rocket-wing2{
+  width: 20px;
+  height: 40px;
+  background: rgb(67, 208, 233);
+  position: absolute;
+  transform: rotate(45deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  top: 68px;
+  left:-5px;
+  border: 1px solid black;
+}
+
+#rocket-window{
+  width: 20px;
+  height: 20px;
+  top: 30px;
+  left: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background: rgb(67, 208, 233);
+  border: 3px solid rgb(59, 57, 56);
+  box-shadow: inset 0 0 5px 2px white;
+}
+
+.rocket-fire{
+  width: 7px;
+  height: 25px;
+  background: orange;
+  position: absolute;
+  border-radius: 25%;
+  box-shadow: 0 0 1px 1px orangered;
+  top: 80px;
+  left: -60px;
+  transform: rotate(60deg);
+  animation: rocketFire 2s linear infinite;
+}
+
+#flame2{
+  left: -40px;
+  top:95px;
+  transform: rotate(50deg);
+}
+
+#flame3{
+  left: -20px;
+  top:110px;
+  transform: rotate(20deg);
+}
+
+
+
+
+#planet2{
+  position: absolute;
+    top: 550px;
+    left: 26%;
+    height: 140px;
+    width: 140px;
+    border-color: #1a5016;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+    background: rgba(180, 27, 103, 0.74);
+    z-index: 1;
+}
+
+#circle{
+    position: relative;
+    top: 564px;
+    left: 27.2%;
+    height: 110px;
+    width: 110px;
+    border-color: #1a5016;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+    background: rgba(160, 0, 79, 0.74);
+    z-index: 5;
+    
+}
+
+
+#saturn{
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  position: absolute;
+  border-radius: 50%;
+  left: 900px;
+  top: 50px;
+  animation: saturnSpin 6s linear infinite;
+  box-shadow: 0 0 10px 5px white;
+  border: 2px solid rgb(161, 79, 2);
+}
+
+
+
+.støv-style{
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  top: 0px;
+  left: 50px;
+  z-index: 3;
+  border-radius: 45%;
+  border: 5px solid black;
+}
+
+/* små detaljer for saturn div */
+
+#støv2{
+  top: 170px;
+  left: 0px;
+}
+
+#støv3{
+  top: 210px;
+  left: 90px;
+}
+
+#støv4{
+  top: 130px;
+  left: 200px;
+}
+#støv5{
+  top: 170px;
+  left: 20px;
+}
+#støv6{
+  top: 50px;
+  left: -10px;
+}
+#støv7{
+  top: 170px;
+  left: 170px;
+}
+#støv8{
+  top: 70px;
+  left: 200px;
+}
+
+#saturn-rings{
+  position: absolute;
+  width: 230px;
+  height: 300px;
+  border-radius: 50%;
+  top: 0px;
+  left: 890px;
+  background: linear-gradient( #695f58, #d4b89c);
+  transform: rotate(60deg);
+}
+
+/* stjerner */
+
+.stjerne-del1{
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  position: absolute;
+}
+
+.stjerne-del2{
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  transform: rotate(180deg);
+  top: -5px;
+}
+
+#stjerne1{
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.2s;
+}
+
+#stjerne2{
+  position: absolute;
+  top: 250px;
+  left: 90px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.4s;
+}
+
+#stjerne3{
+  position: absolute;
+  top: 550px;
+  left: 490px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne4{
+  position: absolute;
+  top: 100px;
+  left: 590px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.8s;
+}
+
+#stjerne5{
+  position: absolute;
+  top: 650px;
+  left: 900px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 1s;
+}
+
+#stjerne6{
+  position: absolute;
+  top: 680px;
+  left: 90px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.2s;
+}
+
+#stjerne7{
+  position: absolute;
+  top: 340px;
+  left: 900px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.4s;
+}
+
+#stjerne8{
+  position: absolute;
+  top: 50px;
+  left: 550px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne9{
+  position: absolute;
+  top: 350px;
+  left: 720px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne10{
+  position: absolute;
+  top: 120px;
+  left: 1230px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+#stjerne11{
+  position: absolute;
+  top: 310px;
+  left: 420px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne12{
+  position: absolute;
+  top: 270px;
+  left: 220px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne13{
+  position: absolute;
+  top: 910px;
+  left: 1620px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne14{
+  position: absolute;
+  top: 310px;
+  left: 1000px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne15{
+  position: absolute;
+  top: 580px;
+  left: 610px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne16{
+  position: absolute;
+  top: 580px;
+  left: 310px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+#stjerne17{
+  position: absolute;
+  top: 390px;
+  left: 240px;
+  animation: stjerneBlink 1s infinite linear;
+  animation-delay: 0.6s;
+}
+
+
+#ufo-container{
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  background: transparent;
+  transform: scale(0.2);
+  top: 100px;
+  left: -90px;
+  animation: ufoAnimation 10s infinite linear;
+}
+
+#ufo-window{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: lightblue;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border: 3px solid black;
+  left: 260px;
+  box-shadow: inset 20px 30px 80px white;
+}
+
+#ufo-body1{
+  position: absolute;
+  width: 800px;
+  height: 100px;
+  background: gray;
+  top: 240px;
+  left: 0px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  animation: ufo-lighting-border 1s linear infinite;
+}
+
+#ufo-body2{
+  position: absolute;
+  width: 800px;
+  height: 100px;
+  background: gray;
+  top: 340px;
+  left: 0px;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  animation: ufo-lighting-border 1s linear infinite;
+}
+
+#ufo-light1{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 280px;
+  left: 20px;
+  animation: ufo-lighting 1s linear infinite;
+  animation-delay: -0.5s;
+}
+
+#ufo-light2{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 280px;
+  left: 200px;
+  animation: ufo-lighting 1s linear infinite;
+}
+
+#ufo-light3{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 280px;
+  left: 370px;
+  animation: ufo-lighting 1s linear infinite;
+  animation-delay: -0.5s;
+}
+
+#ufo-light4{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 280px;
+  right: 200px;
+  animation: ufo-lighting 1s linear infinite;
+}
+
+#ufo-light5{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 280px;
+  right: 20px;
+  animation: ufo-lighting 1s linear infinite;
+  animation-delay: -0.5s;
+}
+#ufo-light6{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 350px;
+  left: 20px;
+  animation: ufo-lighting 1s linear infinite;
+}
+
+#ufo-light7{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 350px;
+  left: 200px;
+  animation: ufo-lighting 1s linear infinite;
+  animation-delay: -0.5s;
+}
+
+#ufo-light8{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 350px;
+  left: 370px;
+  animation: ufo-lighting 1s linear infinite;
+}
+
+#ufo-light9{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 350px;
+  right: 200px;
+  animation: ufo-lighting 1s linear infinite;
+  animation-delay: -0.5s;
+}
+
+#ufo-light10{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lightblue;
+  top: 350px;
+  right: 20px;
+  animation: ufo-lighting 1s linear infinite;
+}
+
+/* Hover funksjoner */
+
+#sun:hover ~ #moon{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #whole-rocket{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #get-earth{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #saturn{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #saturn-rings{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #planet-orbit{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne1{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne2{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne3{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne4{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne5{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne6{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne7{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne8{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne9{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne10{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne11{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne12{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne13{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne14{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne15{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne16{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #stjerne17{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #planet2{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #circle{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover{
+  animation: blackHoleColor 1s linear forwards;
+}
+
+#sun:hover ~ #alien{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#sun:hover ~ #ufo-container{
+  animation: blackHoleAnimation 3s linear forwards;
+}
+
+#circle:hover{
+  transform: scale(0.7);
+}
+
+#circle:hover{
+  transition: all 1.6s ease-in-out;
+}
+
+#moon:hover ~ #alien{
+  animation: alienShow 5.7s linear forwards;
+}
+
+#moon:hover ~ #alien-gun{
+animation: opacityShow 3s linear;
+animation-delay: 2.5s;
+}
+
+#moon:hover ~ #alien-gun-laser{
+  animation: laserEffect 0.5s linear infinite;
+  animation-delay: 3.2s;
+  animation-iteration-count: 3;
+}
+
+#moon:hover ~ #saturn{
+  animation: opacityDisappear 0.5s linear forwards;
+  animation-delay: 4.2s;
+  
+}
+#moon:hover ~ #saturn-rings{
+  animation: opacityDisappear 0.5s linear forwards;
+  animation-delay: 4.2s;
+}
+
+
+ 
+ 
+    /* keyframes */
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move-astronaut {
+  100% {
+    transform: translate(-160px, -160px);
+  }
+}
+
+@keyframes opacityShow{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes blackHoleColor{
+  100%{
+    background: black;
+    border-color: white;
+    box-shadow: 0 0 128px black;
+  }
+}
+
+@keyframes blackHoleAnimation{
+  100%{
+    top: 360px;
+    left: 640px;
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes opacityDisappear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes alienShow{
+  30%{
+    top: 400px;
+  }
+  90%{
+    top:400px;
+  }
+  100%{
+    top: 500px;
+  }
+}
+
+@keyframes laserEffect{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    box-shadow: 0 0 10px 3px blue;
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes earthSpin{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rocketAnimation{
+  33%{
+    bottom: 250px;
+    left: 250px;
+  }
+  30%{
+    transform: rotate(0deg);
+  }
+  40%{
+    transform: rotate(65deg);
+  }
+  66%{
+    bottom: 120px;
+    left: 600px;
+  }
+
+  100%{
+    bottom: 450px;
+    left: 1400px;
+  }
+}
+
+@keyframes rocketFire{
+  50%{
+    box-shadow: 0 0 10px 2px orangered;
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes saturnSpin{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stjerneBlink{
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes ufoAnimation{
+  10%{
+    top: -100px;
+    left: -75px;
+  }
+  20%{
+    top: 100px;
+    left: 150px;
+  }
+  30%{
+    top: 250px;
+    left: 500px;
+  }
+  40%{
+    top: 150px;
+    left: 400px;
+  }
+  50%{
+    top:300px;
+    left: 350px;
+  }
+  60%{
+    top: 350px;
+    left: 220px;
+
+  }
+  70%{
+    top: 200px;
+    left:75px;
+  }
+  80%{
+    top: 300px;
+    left: 222px;
+  }
+  90%{
+    top: 200px;
+    left: 90px;
+  }
+  100%{
+    top: 100px;
+    left: -90px;
+    transform: scale(0.2) rotate(1080deg);
+  }
+}
+
+@keyframes text1Disappear{
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes text2Appear{
+  20%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes text3Appear{
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes ufo-lighting{
+  0%{background: teal;}
+  20%{background: red;}
+  40%{background: yellow;}
+  60%{background: green;}
+  80%{background: orange;}
+  100%{background: purple;}
+}
+
+@keyframes ufo-lighting-border{
+  0%{border: 5px solid teal;}
+  20%{border: 5px solid red;}
+  40%{border: 5px solid yellow;}
+  60%{border: 5px solid green;}
+  80%{border: 5px solid orange;}
+  100%{border: 5px solid purple;}
+}
+
+
+
+
+
+
+
+
+
+
+
+    

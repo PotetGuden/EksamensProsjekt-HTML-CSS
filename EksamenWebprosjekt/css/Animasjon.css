@@ -1,0 +1,1124 @@
+/* KODET AV JOSTEIN ERIKSEN og bittelitt annen elev*/
+body {
+	background-color: rgb(22, 48, 48);
+}
+
+/* settingene for hoved diven (størrelse til siden og posisjonering) */
+#main-container {
+	position: relative;
+	width: 1280px;
+	height: 720px;
+	margin: auto;
+	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+	background-color: rgb(255, 192, 203);
+
+}
+
+.textBubbles {
+	position: absolute;
+	top: 450px;
+	left: 700px;
+	background-color: white;
+	border-radius: 10px;
+	filter: drop-shadow(4px 5px 6px);
+	width: 200px;
+	font-family: cursive;
+	text-align: center;
+	z-index: 1;
+}
+
+#rolando-tekst {
+	position: absolute;
+	top: 300px;
+	left: 200px;
+	opacity: 0;
+	animation: opacityEqual1 15s;
+	animation-delay: 2.1s;
+}
+
+#drawingboard {
+	position: absolute;
+	width: 480px;
+	height: 200px;
+	background-color: white;
+	margin-left: 412px;
+	margin-top: 140px;
+	border: solid;
+	overflow: hidden;
+}
+
+#power-ring {
+	width: 10px;
+	height: 10px;
+	background: white;
+	border: 1px solid black;
+	position: absolute;
+	left: 1px;
+	border-radius: 50%;
+	top: 2px;
+}
+
+#power-line {
+	width: 2px;
+	height: 7px;
+	background: black;
+	border: 1px solid white;
+	position: absolute;
+	left: 3px;
+	top: -1px;
+}
+
+
+
+#portal-to-korridor {
+	width: 50px;
+	height: 100px;
+	background: rgb(38, 38, 58);
+	position: absolute;
+	left: 375px;
+	border-radius: 50%;
+	top: 30px;
+	animation: portalAnimation 1s linear infinite;
+	box-shadow: 0 0 5px 10px rgb(233, 229, 16);
+}
+
+
+#portal-spawn {
+	opacity: 0;
+	z-index: 10;
+}
+
+
+
+#screen {
+	width: 480px;
+	height: 190px;
+	background: lightblue;
+	opacity: 0;
+}
+
+
+#grass {
+	width: 480px;
+	height: 35px;
+	position: absolute;
+	bottom: 20px;
+	background: green;
+}
+
+#master-roshi {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(-25deg) rotateY(180deg);
+	top: 60px;
+	left: -100px;
+
+}
+
+#sayan-ball {
+	width: 0px;
+	height: 0px;
+	background: orangered;
+	border-radius: 50%;
+	position: absolute;
+	top: 100px;
+	left: 60px;
+	z-index: 2;
+
+}
+
+
+
+#krillin {
+	width: 50px;
+	height: 100px;
+	position: absolute;
+	top: 60px;
+	left: 380px;
+	opacity: 0;
+}
+
+#floor {
+	position: absolute;
+	border-bottom: 230px solid rgb(229, 182, 137);
+	border-left: 600px solid transparent;
+	border-right: 600px solid transparent;
+	height: 0px;
+	width: 600px;
+	bottom: 0px;
+	left: -250px
+}
+
+#line {
+	width: 1100px;
+	height: 2px;
+	margin-left: -200px;
+	position: absolute;
+	background-color: rgb(229, 182, 137);
+	border: 0 none;
+	transform: rotate(90deg);
+	overflow: hidden;
+}
+
+#line2 {
+	width: 1100px;
+	height: 2px;
+	margin-left: 400px;
+	position: absolute;
+	background-color: rgb(229, 182, 137);
+	border: 0 none;
+	transform: rotate(90deg);
+	overflow: hidden;
+}
+
+#bodylando {
+	position: absolute;
+	top: 250px;
+	left: -150px;
+	transform: scaleX(-1);
+}
+
+#leftarm {
+	position: absolute;
+	top: 280px;
+	left: -50px;
+	transform: scaleX(-1);
+}
+
+#rightarm {
+	position: absolute;
+	transform: scaleX(-1);
+	top: 300px;
+	left: -140px;
+}
+
+
+#hair {
+	position: absolute;
+	transform: scaleX(-1);
+	height: auto;
+	width: auto;
+	max-width: 245px;
+	max-height: 250px;
+	margin-top: 252px;
+	left: 28px;
+
+
+
+}
+
+
+
+
+#hologram-bunn {
+	width: 100px;
+	height: 55px;
+	background: grey;
+	position: absolute;
+	border-radius: 50%;
+	border: solid 2px black;
+	top: 520px;
+	left: 950px;
+	box-shadow: 0px 0px 20px 1px blue;
+	z-index: 2;
+}
+
+#hologram-rolando {
+	position: absolute;
+	width: 300px;
+	height: 350px;
+	transform: scale(0.6);
+	left: 750px;
+	top: 180px;
+	opacity: 0;
+}
+
+.hair2 {
+	position: absolute;
+	max-width: 245px;
+	max-height: 250px;
+	left: 220px;
+	top: 10px;
+}
+
+.bodylando2 {
+	position: absolute;
+
+
+}
+
+.leftarm2 {
+	position: absolute;
+	left: -100px;
+	top: 30px;
+
+}
+
+.rightarm2 {
+	position: absolute;
+	top: 40px;
+	left: -5px;
+
+}
+
+#supersayan {
+	position: absolute;
+	width: 200px;
+	height: 400px;
+	background: yellow;
+	top: 60px;
+	left: 225px;
+	border-radius: 20%;
+	box-shadow: 0 0 50px 30px yellow;
+	animation: hologram1Animation 1s linear infinite;
+
+
+}
+
+#hologram-bunn2 {
+	width: 100px;
+	height: 55px;
+	background: grey;
+	position: absolute;
+	border-radius: 50%;
+	border: solid 2px black;
+	top: 600px;
+	left: 1100px;
+	box-shadow: 0px 0px 20px 1px blue;
+}
+
+#hologram-rolando2 {
+	position: absolute;
+	width: 300px;
+	height: 350px;
+	transform: scale(0.6);
+	left: 900px;
+	top: 260px;
+	opacity: 0.4;
+
+}
+
+#supersayan2 {
+	position: absolute;
+	width: 200px;
+	height: 400px;
+	background: blue;
+	top: 60px;
+	left: 225px;
+	border-radius: 20%;
+	box-shadow: 0 0 50px 30px blue;
+	animation: hologram2Animation 1s linear infinite;
+
+
+
+}
+
+#whole-clock {
+	width: 100px;
+	height: 100px;
+	background: rgb(211, 199, 199);
+	border-radius: 50%;
+	border: 5px solid black;
+	position: absolute;
+	top: 50px;
+	left: 75px;
+	transform: rotateY(40deg);
+}
+
+#pin1 {
+	width: 4px;
+	height: 45px;
+	background: black;
+	position: absolute;
+	top: 5px;
+	left: 49px;
+	animation: clockAnimation 3600s infinite linear;
+}
+
+#pin2 {
+	width: 4px;
+	height: 25px;
+	background: black;
+	position: absolute;
+	top: 45px;
+	left: 40px;
+	transform: rotate(45deg);
+}
+
+#pin3 {
+	width: 2px;
+	height: 45px;
+	background: black;
+	position: absolute;
+	top: 5px;
+	left: 49px;
+	animation: clockAnimation 60s infinite linear;
+}
+
+
+#pins {
+	width: 110px;
+	height: 90px;
+	background: rgb(211, 199, 199);
+	border-radius: 50%;
+	border: 3px dotted black;
+	position: absolute;
+	transform: rotateY(40deg);
+	top: 3px;
+	left: -8px;
+}
+
+
+#carpet {
+	position: absolute;
+	border-bottom: 230px solid rgb(225, 225, 225);
+	border-left: 300px solid transparent;
+	border-right: 300px solid transparent;
+	height: 0px;
+	width: 400px;
+	bottom: 0px;
+	left: 150px;
+	top: 530px;
+}
+
+.stoler-style {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+
+#stol1 {
+	bottom: 100px;
+	left: 500px;
+}
+
+#stol2 {
+	bottom: 0px;
+	left: 820px;
+}
+
+#stol3 {
+	bottom: 0px;
+	left: 380px;
+}
+
+#stol4 {
+	bottom: 0px;
+	left: 600px;
+}
+
+#stol5 {
+	bottom: 100px;
+	left: 700px;
+}
+
+.stolben {
+	width: 6px;
+	height: 125px;
+	top: -25px;
+	left: 3px;
+	background: rgb(73, 53, 27);
+	position: absolute;
+	z-index: 2;
+}
+
+.stolben:nth-child(2) {
+	left: 90px;
+}
+
+.stolben-foran {
+	width: 6px;
+	height: 50px;
+	top: -25px;
+	left: 30px;
+	background: rgb(73, 53, 27);
+	position: absolute;
+}
+
+.stol-sete {
+	width: 90px;
+	height: 50px;
+	background: rgb(104, 98, 95);
+	position: absolute;
+	border: 2px solid rgb(0, 0, 0);
+}
+
+#sete3 {
+	transform: skewX(-20deg);
+	left: 13px;
+}
+
+#sete2 {
+	transform: skewX(20deg);
+	left: -7px;
+}
+
+#sete1 {
+	transform: skewX(-10deg);
+	left: 9px;
+}
+
+#sete5 {
+	transform: skewX(10deg);
+	left: -3px;
+}
+
+#sete4 {
+	left: 3px;
+}
+
+#ben1 {
+	left: 102px;
+	top: 1px;
+}
+
+#ben2 {
+	left: -17px;
+	top: 1px;
+}
+
+#ben3 {
+	left: 110px;
+	top: 1px;
+}
+
+#ben5 {
+	left: -8px;
+	top: 1px;
+}
+
+.stol-top {
+	width: 93px;
+	height: 6px;
+	top: -25px;
+	left: 3px;
+	background: rgb(73, 53, 27);
+	position: absolute;
+	z-index: 2;
+}
+
+.stol-pinne-midten {
+	width: 93px;
+	height: 6px;
+	top: 50px;
+	left: 3px;
+	background: rgb(73, 53, 27);
+	position: absolute;
+	z-index: 2;
+}
+
+#holo-tekst {
+	position: absolute;
+	right: 50px;
+	top: 170px;
+	transform: rotate(10deg);
+	font-size: 50px;
+	color: red;
+}
+
+#vindu {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background-color: aqua;
+	border: solid 4px;
+	border-color: rgb(229, 182, 137);
+	left: 1100px;
+	top: 50px;
+	transform: skewY(10deg)rotate(-0.7deg)
+}
+
+#karm {
+	width: 155px;
+	height: 4px;
+	left: 1100px;
+	top: 125px;
+	position: absolute;
+	background-color: rgb(229, 182, 137);
+	border: 0 none;
+	transform: rotate(180deg);
+	transform: skewY(10deg)rotate(-0.7deg)
+}
+
+#karm2 {
+	width: 155px;
+	height: 4px;
+	left: 1100px;
+	top: 125px;
+	position: absolute;
+	background-color: rgb(229, 182, 137);
+	border: 0 none;
+	transform: rotate(90deg);
+
+}
+
+.cloud {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: white;
+	border-radius: 60%;
+}
+
+#circle2 {
+	left: 30px;
+	top: 10px;
+
+}
+
+#circle3 {
+	top: 20px;
+
+}
+
+#ventilasjon {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left: 1000px;
+	top: 20px;
+	background: grey;
+	border: solid 2px;
+	border-color: black;
+	transform: skewY(10deg)rotate(-0.7deg)
+}
+
+.ventlinje1 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 3px;
+}
+
+.ventlinje2 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 10px;
+}
+
+.ventlinje3 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 17px;
+}
+
+.ventlinje4 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 24px;
+}
+
+.ventlinje5 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 31px;
+}
+
+.ventlinje6 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 38px;
+}
+
+.ventlinje7 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 45px;
+}
+
+.ventlinje8 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 52px;
+}
+
+.ventlinje9 {
+	position: absolute;
+	width: 55px;
+	height: 3px;
+	background: black;
+	left: 7px;
+	top: 59px;
+}
+
+.vindlinje {
+	position: absolute;
+	width: 30px;
+	height: 3px;
+	background: white;
+}
+
+#vind1 {
+	left: 965px;
+	top: 30px;
+	animation: vind1 1s linear infinite;
+}
+
+#vind2 {
+	left: 936px;
+	top: 30px;
+	animation: vind1 1s linear infinite;
+	animation-delay: 0.6s
+}
+
+#vind3 {
+	left: 965px;
+	top: 65px;
+	animation: vind2 1s linear infinite;
+}
+
+#vind4 {
+	left: 936px;
+	top: 65px;
+	animation: vind2 1s linear infinite;
+	animation-delay: 0.6s
+}
+
+/* animasjonen for vind effekten til ventilasjonen, valgte å legge til ett delay så det så litt ut som bølger og lignet mer på en vind effekt */
+
+#holder1 {
+	position: absolute;
+	width: 20px;
+	height: 40px;
+	background: saddlebrown;
+	left: 450px;
+	top: 40px;
+	border: 1px solid black;
+}
+
+
+#holder2 {
+	position: absolute;
+	width: 20px;
+	height: 40px;
+	background: saddlebrown;
+	left: 850px;
+	top: 40px;
+	border: 1px solid black;
+}
+
+/* stilsetting til sverdet over tven */
+
+#blade {
+	position: absolute;
+	width: 475px;
+	height: 20px;
+	background: grey;
+	left: 420px;
+	top: 50px;
+	border-radius: 100%
+}
+
+#handle {
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background: saddlebrown;
+	left: 635px;
+	top: 50px;
+}
+
+#armguard {
+	position: absolute;
+	width: 5px;
+	height: 30px;
+	background: black;
+	left: 635px;
+	top: 45px;
+}
+
+#armguard2 {
+	position: absolute;
+	width: 5px;
+	height: 30px;
+	background: black;
+	left: 685px;
+	top: 45px;
+}
+
+.handleline {
+	position: absolute;
+	width: 3px;
+	height: 20px;
+	background: black;
+}
+
+
+#handle1 {
+	position: absolute;
+	left: 12px;
+}
+
+#handle2 {
+	position: absolute;
+	left: 22px;
+}
+
+#handle3 {
+	position: absolute;
+	left: 32px;
+}
+
+#handle4 {
+	position: absolute;
+	left: 42px;
+}
+
+#hologram-tekst1 {
+	opacity: 0;
+	left: 920px;
+	top: 140px;
+}
+
+#shine{
+	width:475px;
+	height:2px;
+	background: black;
+	position: absolute;
+	top: 59px;
+	left: 420px;
+}
+
+#click-me {
+	position: absolute;
+	background: rgb(235, 228, 228);
+	left: 190px;
+	border: 2px solid rgb(207, 98, 98);
+	border-radius: 50%;
+	padding: 3px;
+}
+
+#click-me-trigger {
+	width: 80px;
+	top: 15px;
+	height: 30px;
+	position: absolute;
+	left: 190px;
+	z-index: 2;
+	opacity: 0;
+}
+
+#click-me-trigger:checked ~ #krillin {
+	opacity: 1;
+	animation: krillinDisappear 0.6s linear forwards;
+	animation-delay: 5s;
+}
+
+#click-me-trigger:checked ~ #master-roshi {
+	animation: roshiAppear 1s forwards;
+}
+
+#click-me-trigger:checked ~ #sayan-ball {
+	animation: ballMove 4s linear;
+	animation-delay: 1.2s;
+
+}
+
+#click-me-trigger:checked ~ #click-me {
+	animation: btnPressed 0.8s linear;
+}
+
+#click-me-trigger:checked ~ #portal-spawn {
+	animation: opacityShow 10s linear forwards;
+	animation-delay: 6s;
+
+}
+
+#hologram-bunn:hover ~ #hologram-rolando {
+	animation: bounce 1s linear infinite;
+}
+
+
+#controls-tv {
+	width: 480px;
+	height: 20px;
+	background: black;
+	position: absolute;
+	bottom: 0px;
+}
+
+#tv-trigger {
+	position: absolute;
+	bottom: 0px;
+	left: 3px;
+	z-index: 2;
+	opacity: 0;
+}
+
+#tv-trigger:checked ~ #screen {
+	opacity: 1;
+}
+
+#power-knapp {
+	width: 15px;
+	height: 15px;
+	background: white;
+	position: absolute;
+	left: 5px;
+	border-radius: 50%;
+	top: 4px;
+}
+
+#hologram-bunn:hover ~ #hologram-tekst1 {
+	opacity: 1;
+}
+
+
+@keyframes opacityShow {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes portalAnimation {
+	33% {
+		box-shadow: 0 0 5px 10px rgb(22, 22, 158);
+	}
+
+	50% {
+		transform: scale(0.6);
+		box-shadow: 0 0 5px 10px rgba(36, 36, 85);
+	}
+
+	66% {
+		box-shadow: 0 0 5px 10px rgb(15, 185, 38);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes btnPressed {
+	50% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/* animasjonen for vind effekten til ventilasjonen, valgte å legge til ett delay så det så litt ut som bølger og lignet mer på en vind effekt */
+@keyframes vind1 {
+
+	50% {
+		opacity: 0.7;
+		top: 45px;
+	}
+
+	100% {
+		opacity: 0.4;
+		top: 30px;
+	}
+}
+
+@keyframes vind2 {
+
+	50% {
+		opacity: 0.7;
+		top: 85px;
+	}
+
+	100% {
+		opacity: 0.4;
+		top: 65px;
+	}
+}
+
+
+@keyframes clockAnimation {
+	0% {
+		top: 5px;
+		left: 49px;
+	}
+
+	12.5% {
+		top: 15px;
+		left: 60px;
+		transform: rotate(45deg);
+	}
+
+	25% {
+		top: 25px;
+		left: 70px;
+		transform: rotate(90deg);
+	}
+
+	37.5% {
+		top: 40px;
+		left: 69px;
+		transform: rotate(135deg);
+	}
+
+	50% {
+		top: 50px;
+		left: 50px;
+		transform: rotate(180deg);
+	}
+
+	62.5% {
+		top: 40px;
+		left: 35px;
+		transform: rotate(225deg);
+	}
+
+	75% {
+		top: 28px;
+		left: 24px;
+		transform: rotate(270deg);
+	}
+
+	87.5% {
+		top: 11px;
+		left: 30px;
+		transform: rotate(315deg);
+	}
+
+	100% {
+		top: 5px;
+		left: 49px;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes roshiAppear {
+	100% {
+		left: 0px;
+	}
+}
+
+@keyframes ballMove {
+
+	60%,
+	80%,
+	100% {
+		top: 20px;
+	}
+
+	50%,
+	70%,
+	90% {
+		top: 50px;
+	}
+
+	50% {
+		width: 60px;
+		height: 60px;
+		box-shadow: 0 0 10px 10px orange;
+		top: 50px;
+		left: 50px;
+	}
+
+	100% {
+		width: 60px;
+		height: 60px;
+		box-shadow: 0 0 10px 10px orange;
+		left: 370px;
+		top: 50px;
+	}
+}
+
+@keyframes krillinDisappear {
+	80% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes opacityEqual1 {
+	30% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
+
+@keyframes hologram1Animation {
+	10% {
+		opacity: 0.7;
+	}
+
+	50% {
+		box-shadow: 0 0 50px 100px yellow;
+	}
+
+	100% {
+		box-shadow: 0 0 50px 30px yellow;
+	}
+}
+
+
+
+@keyframes opacityShow {
+	100% {
+		opacity: 1;
+	}
+
+}
+
+
+@keyframes bounce {
+	0% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 0.5;
+		top: 130px;
+	}
+
+	100% {
+		opacity: 0.5;
+		top: 180px;
+	}
+}
+
+
+@keyframes hologram2Animation {
+
+	50% {
+		box-shadow: 0 0 50px 50px blue;
+	}
+
+	100% {
+		box-shadow: 0 0 50px 30px blue;
+	}
+}

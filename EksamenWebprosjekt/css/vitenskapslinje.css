@@ -1,0 +1,1543 @@
+/* KODET AV EN ANNEN ELEV */
+@font-face {
+    src: url(fonts/WalterTurncoat-Regular.ttf);
+    font-family: walter-turncoat;
+}
+
+body {
+    background-color: rgb(22, 48, 48);
+}
+
+#main-container {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(saddlebrown, khaki);
+}
+
+.text-bubbles {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 6px);
+    font-family: fantasy;
+    width: 240px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0%;
+}
+
+/* BLACKBOARDS */
+#blackboard-mathematician {
+    width: 500px;
+    height: 150px;
+    top: 30px;
+    left: 760px;
+    position: absolute;
+    background-color: darkgreen;
+}
+
+#crazy-blackboard-mathematician-frame {
+    width: 530px;
+    height: 180px;
+    top: 16px;
+    left: 745px;
+    position: absolute;
+    background-color: rgb(110, 62, 0);
+    border: 2px solid black;
+    border-radius: 4%;
+}
+
+#blackboard-rotate {
+    width: 250px;
+    height: 150px;
+    top: -7px;
+    left: 10px;
+    position: relative;
+    background-color: darkgreen;
+    border-radius: 5%;
+    z-index: 1;
+}
+
+.blackboard-scribble {
+    font-family: walter-turncoat;
+    color: white;
+    position: relative;
+}
+
+#blackboard-frame {
+    width: 270px;
+    height: 170px;
+    top: 389px;
+    left: 400px;
+    position: absolute;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+    border-radius: 5%;
+}
+
+#blackboard-frame:hover {
+    animation-name: scale-blackboard;
+    animation-duration: 0.175s;
+    animation-fill-mode: forwards;
+    z-index: 100;
+}
+
+#small-blackboard-rotate {
+    width: 150px;
+    height: 100px;
+    top: -6px;
+    left: 11px;
+    position: relative;
+    background-color: darkgreen;
+    z-index: 1;
+}
+
+#small-blackboard-frame {
+    width: 170px;
+    height: 120px;
+    top: 434px;
+    left: 100px;
+    position: absolute;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+    border-radius: 7%;
+}
+
+#small-blackboard-frame:hover {
+    animation-name: scale-blackboard;
+    animation-duration: 0.175s;
+    animation-fill-mode: forwards;
+    z-index: 100;
+}
+/* TEXT WRITTEN ON BLACKBOARDS */
+#math {
+    top: 10px;
+    left: 10px;
+}
+
+#math2 {
+    left: 10px;
+}
+
+#math3 {
+    left: 10px;
+}
+
+#math4 {
+    left: 10px;
+}
+
+#math5 {
+    left: 110px;
+    top: -76px;
+}
+
+#math6 {
+    left: 10px;
+}
+
+#math7 {
+    left: 10px;
+}
+
+#math8 {
+    left: 10px;
+}
+
+#math9 {
+    left: 10px;
+}
+
+#math10 {
+    left: 10px;
+}
+
+#math11 {
+    left: 10px;
+}
+
+/* FLOOR */
+#floor-frame {
+    width: 1580px;
+    height: 60px;
+    position: absolute;
+    top: 680px;
+    border: 2px solid black;
+    background: black;
+
+}
+
+.brick:nth-child(even) {
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+
+.brick:nth-child(odd) {
+    background-color: white;
+    width: 43px;
+    height: 45px;
+    display: inline-block;
+}
+
+#floor-frame-row2 {
+    width: 1580px;
+    height: 45px;
+    position: absolute;
+    top: 635px;
+    border: 2px solid black;
+    background: black;
+}
+
+.brick2:nth-child(odd) {
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+
+.brick2:nth-child(even) {
+    background-color: white;
+    width: 43px;
+    height: 45px;
+    display: inline-block;
+}
+
+/* GONZALES IMG */
+#gonzales-portrait {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 225px;
+    left: 400px;
+    border: 2px solid black;
+    z-index: 100;
+}
+
+#gonzales-img {
+    animation: moving-gonzales-portrait 3s infinite;
+    z-index: 10;
+    top: 5px;
+    left: 10px;
+    position: absolute;
+}
+
+#gonzales-portrait-frame1 {
+    width: 130px;
+    height: 180px;
+    position: absolute;
+    top: 211px;
+    left: 386px;
+    background-color: rgb(110, 62, 0);
+    border: 2px solid black;
+}
+
+#gonzales-portrait-frame2 {
+    width: 130px;
+    height: 2px;
+    position: relative;
+    top: 12px;
+    left: 0px;
+    background-color: black;
+}
+
+#gonzales-portrait-frame3 {
+    width: 130px;
+    height: 2px;
+    position: relative;
+    top: 162px;
+    left: 0px;
+    background-color: black;
+}
+
+/* CLOCK */
+#whole-clock {
+    width: 100px;
+    height: 100px;
+    background: rgb(211, 199, 199);
+    border-radius: 50%;
+    border: 5px solid black;
+    position: absolute;
+    top: 250px;
+    left: 75px;
+}
+
+#dot {
+    width: 7px;
+    height: 7px;
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    top: 45px;
+    left: 47px;
+}
+
+#pin1 {
+    width: 4px;
+    height: 45px;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 49px;
+    animation: clockAnimation 3600s infinite linear;
+}
+
+#pin2 {
+    width: 4px;
+    height: 25px;
+    background: black;
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    transform: rotate(45deg);
+}
+
+#pin3 {
+    width: 2px;
+    height: 50px;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 49px;
+    animation: clockAnimation 60s infinite linear;
+}
+#pins {
+    width: 100px;
+    height: 100px;
+    background: rgb(211, 199, 199);
+    border-radius: 50%;
+    border: 3px dotted black;
+    position: absolute;
+    top: -2.5px;
+    left: -3px;
+}
+
+/* WINDOW */
+#window {
+    width: 456px;
+    height: 150px;
+    top: 40px;
+    left: 50px;
+    position: absolute;
+    border: 2px solid black;
+    background-image: radial-gradient(mediumblue, skyblue);
+}
+
+#frame-around-window1 {
+    width: 20px;
+    height: 182px;
+    position: absolute;
+    background-color: rgb(110, 62, 0);
+    top: 27px;
+    left: 33px;
+    z-index: 2;
+    border: 2px solid black;
+}
+
+#frame-around-window2 {
+    width: 20px;
+    height: 182px;
+    position: absolute;
+    background-color: rgb(110, 62, 0);
+    top: 27px;
+    left: 511px;
+    z-index: 2;
+    border: 2px solid black;
+}
+
+#frame-around-window3 {
+    width: 498px;
+    height: 15px;
+    position: absolute;
+    background-color: rgb(110, 62, 0);
+    top: 27px;
+    left: 33px;
+    z-index: 2;
+    border: 2px solid black;
+}
+
+#frame-around-window4 {
+    width: 498px;
+    height: 15px;
+    position: absolute;
+    background-color: rgb(110, 62, 0);
+    top: 194px;
+    left: 33px;
+    z-index: 2;
+    border: 2px solid black;
+}
+
+#window-frame {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border: 3px solid black;
+    z-index: 1;
+}
+
+#window-frame2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 151px;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+#window-frame3 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 305px;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+/* SUN */
+#sun {
+    width: 100px;
+    height: 100px;
+    top: -2px;
+    left: 360px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: yellow;
+    z-index: 1;
+    animation: scale-animation 2s infinite;
+    border: 2px solid black;
+}
+#sun-part1 {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background-color: yellow;
+    transform: rotate(120deg);
+    border: 2px solid black;
+}
+
+#sun-part2 {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    left: -17px;
+    background-color: yellow;
+    transform: rotate(90deg);
+    border: 2px solid black;
+}
+
+#sun-part3 {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    background-color: yellow;
+    transform: rotate(60deg);
+    border: 2px solid black;
+}
+
+#sun-part4 {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    background-color: yellow;
+    transform: rotate(30deg);
+    border: 2px solid black;
+}
+
+#sun-part5 {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    background-color: yellow;
+    transform: rotate(-14deg);
+    border: 2px solid black;
+}
+
+/* CLOUD */
+#cloud {
+    animation: moving-cloud 10s infinite;
+    top: 30px;
+    left: 1px;
+    position: absolute;
+    z-index: 1;
+}
+#cloud-part1 {
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    /* bytt til 50px*/
+    border-radius: 40%;
+    background-color: white;
+    z-index: 1;
+}
+
+#cloud-part2 {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    /* bytt til 50px*/
+    border-radius: 40%;
+    background-color: white;
+    z-index: 1;
+}
+
+#cloud-part3 {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    border-radius: 40%;
+    background-color: white;
+    z-index: 1;
+}
+/* SCAFFOLD */
+#scaffold-frame {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 275px;
+    left: 777px;
+    z-index: 100;
+}
+
+#scaffold-leg1 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg2 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 70px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg3 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 140px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg4 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 210px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg5 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 240px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg6 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 270px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg7 {
+    width: 3px;
+    height: 200px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 360px;
+    bottom: 200px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg8 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 460px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-leg9 {
+    width: 3px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: -3px;
+    left: 494px;
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-horizontal1 {
+    width: 500px;
+    height: 5px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: 200px;
+    background-color: rgb(110, 62, 0);
+    z-index: 1;
+}
+
+#scaffold-horizontal2 {
+    width: 500px;
+    height: 3px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: 370px;
+    background-color: rgb(211, 211, 211);
+    z-index: 1;
+}
+
+#scaffold-horizontal3 {
+    width: 500px;
+    height: 5px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: 350px;
+    background-color: rgb(110, 62, 0);
+    z-index: 1;
+}
+
+#scaffold-horizontal4 {
+    width: 274px;
+    height: 5px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: 10px;
+    background-color: rgb(110, 62, 0);
+    z-index: 1;
+}
+
+#scaffold-horizontal5 {
+    width: 40px;
+    height: 5px;
+    position: absolute;
+    border: 2px solid black;
+    bottom: 10px;
+    left: 460px;
+    background-color: rgb(110, 62, 0);
+    z-index: 1;
+}
+
+#scaffold-stabelizer1 {
+    width: 3px;
+    height: 200px;
+    position: absolute;
+    border: 2px solid black;
+    left: 36px;
+    bottom: 8px;
+    transform: rotate(20deg);
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-stabelizer2 {
+    width: 3px;
+    height: 165px;
+    position: absolute;
+    border: 2px solid black;
+    left: 36px;
+    bottom: 195px;
+    transform: rotate(-25deg);
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-stabelizer3 {
+    width: 3px;
+    height: 190px;
+    position: absolute;
+    border: 2px solid black;
+    left: 256px;
+    bottom: 12px;
+    transform: rotate(8deg);
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-stabelizer4 {
+    width: 3px;
+    height: 155px;
+    position: absolute;
+    border: 2px solid black;
+    left: 254px;
+    bottom: 200px;
+    transform: rotate(-11deg);
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-stabelizer5 {
+    width: 3px;
+    height: 190px;
+    position: absolute;
+    border: 2px solid black;
+    left: 477px;
+    bottom: 12px;
+    transform: rotate(9deg);
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-stabelizer6 {
+    width: 3px;
+    height: 155px;
+    position: absolute;
+    border: 2px solid black;
+    left: 478px;
+    bottom: 200px;
+    transform: rotate(-12deg);
+    background-color: rgb(211, 211, 211);
+}
+
+#scaffold-frame {
+    animation-name: rumble;
+    animation-duration: 0.5s;
+    animation-delay: 17s;
+    animation-iteration-count: 5;
+}
+/* LADDER */
+#ladder {
+    width: 50px;
+    height: 400px;
+    left: -50px;
+    top: -160px;
+    position: relative;
+}
+
+#ladder-vertical {
+    width: 10px;
+    height: 350px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+    top: 50px;
+    border-radius: 15%;
+}
+
+#ladder-vertical2 {
+    width: 10px;
+    height: 350px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+    left: 40px;
+    bottom: 304px;
+    border-radius: 15%;
+}
+
+#ladder-horizontal1 {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: rgb(110, 62, 0);
+    top: 80px;
+    left: 5px;
+    transform: rotate(9deg);
+    border-radius: 15%;
+    border: 2px solid black;
+}
+
+#ladder-horizontal2 {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: rgb(110, 62, 0);
+    top: 140px;
+    left: 5px;
+    transform: rotate(-7deg);
+    border-radius: 15%;
+    border: 2px solid black;
+}
+
+#ladder-horizontal3 {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: rgb(110, 62, 0);
+    top: 220px;
+    left: 5px;
+    transform: rotate(-15deg);
+    border-radius: 15%;
+    border: 2px solid black;
+}
+
+#ladder-horizontal4 {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: rgb(110, 62, 0);
+    top: 280px;
+    left: 3px;
+    border-radius: 15%;
+    border: 2px solid black;
+}
+
+#ladder-horizontal5 {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: rgb(110, 62, 0);
+    top: 360px;
+    left: 5px;
+    transform: rotate(15deg);
+    border-radius: 15%;
+    border: 2px solid black;
+}
+
+/* CRAZY MATHEMATICIAN */
+#crazy-mathematician {
+    top: -135px;
+    left: 122px;
+    position: absolute;
+    animation-name: rumble-negative;
+    animation-duration: 0.5s;
+    animation-delay: 17s;
+    animation-iteration-count: 5;
+}
+#chalk {
+    width: 1px;
+    height: 5px;
+    position: relative;
+    top: -5px;
+    left: 25px;
+    background-color: white;
+    border: 2px solid black;
+    transform: rotate(70deg);
+    z-index: 1;
+}
+
+#head {
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    top: 5px;
+    position: absolute;
+    border: 2px solid black;
+    background-color: rgb(197, 140, 133);
+    z-index: 1;
+}
+
+#hair {
+    position: absolute;
+    top: -22px;
+    left: 90px;
+    z-index: -1;
+}
+
+#hair-base {
+    width: 20px;
+    height: 15px;
+    position: relative;
+    top: -31px;
+    right: 90px;
+    background-color: azure;
+    border-radius: 30%;
+}
+
+#hair-strand1 {
+    width: 0;
+    height: 0;
+    top: 25px;
+    right: 96px;
+    position: relative;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid azure;
+    z-index: 1;
+    transform: rotate(-120deg);
+}
+
+#hair-strand2 {
+    width: 0;
+    height: 0;
+    top: 7px;
+    right: 97px;
+    position: relative;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid azure;
+    z-index: 1;
+    transform: rotate(-60deg);
+}
+
+#hair-strand3 {
+    width: 0;
+    height: 0;
+    top: -9px;
+    right: 90px;
+    position: relative;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid azure;
+    z-index: 1;
+}
+
+#hair-strand4 {
+    width: 0;
+    height: 0;
+    top: -18px;
+    right: 80px;
+    position: relative;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid azure;
+    z-index: 1;
+    transform: rotate(15deg);
+}
+
+#hair-strand5 {
+    width: 0;
+    height: 0;
+    top: -20px;
+    right: 72px;
+    position: relative;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid azure;
+    z-index: -1;
+    transform: rotate(70deg);
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    top: 25px;
+    right: 5px;
+    position: relative;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 50px solid white;
+    z-index: 1;
+}
+
+#right-arm {
+    width: 25px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    border: 2px solid black;
+    background-color: rgb(197, 140, 133);
+    transform: rotate(-50deg);
+    animation-name: chalk-drawing;
+    animation-duration: 0.5s;
+    animation-iteration-count: 50;
+}
+#left-arm {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    left: -5px;
+    border: 2px solid black;
+    background-color: rgb(197, 140, 133);
+}
+
+#right-leg {
+    width: 5px;
+    height: 25px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    border: 2px solid black;
+    background-color: rgb(197, 140, 133);
+    transform: rotate(-10deg);
+}
+
+#left-leg {
+    width: 5px;
+    height: 25px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    border: 2px solid black;
+    background-color: rgb(197, 140, 133);
+    transform: rotate(10deg);
+}
+
+/* PORTAL GUN */
+#portal-gun {
+    left: 960px;
+    top: 170px;
+    position: absolute;
+    transform: rotateY(170deg) rotate(-60deg);
+    z-index: 100;
+    opacity: 0;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 25s;
+    animation-fill-mode: forwards;
+
+}
+
+#part1 {
+    width: 35px;
+    height: 12px;
+    border-radius: 30%;
+    background: grey;
+    position: absolute;
+}
+
+#part2 {
+    width: 43px;
+    height: 3px;
+    background: rgb(66, 70, 66);
+    position: absolute;
+    top: 5px;
+    left: -8px;
+}
+
+#part3 {
+    width: 6px;
+    height: 6px;
+    background: rgb(119, 128, 119);
+    position: absolute;
+    top: 4px;
+    left: -11px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px rgb(50, 50, 197);
+}
+
+#part4 {
+    width: 10px;
+    height: 20px;
+    background: rgb(34, 36, 34);
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#part5 {
+    width: 4px;
+    height: 13px;
+    background: rgb(184, 69, 69);
+    border-radius: 30%;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+#portal-gun-laser {
+    width: 350px;
+    height: 5px;
+    background: blue;
+    position: absolute;
+    transform: rotate(65deg);
+    top: 350px;
+    left: 865px;
+    animation: laserEffect 0.5s linear infinite;
+    animation-delay: 27s;
+    animation-iteration-count: 3;
+    opacity: 0;
+    z-index: 100;
+}
+#portal {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    left: 1110px;
+    top: 500px;
+    background-color: blue;
+    border: 2px solid black;
+    border-radius: 50%;
+    opacity: 0;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 29s;
+    animation-fill-mode: forwards;
+    z-index: 100;
+}
+
+/* STOOL */
+#leg1 {
+    width: 5px;
+    height: 50px;
+    position: relative;
+    top: -55px;
+    left: 115px;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+}
+
+#leg2 {
+    width: 5px;
+    height: 48px;
+    position: relative;
+    top: -110px;
+    left: 150px;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+}
+
+#stool-seat {
+    width: 40px;
+    height: 5px;
+    position: relative;
+    top: -162px;
+    left: 115px;
+    border: 2px solid black;
+    background-color: rgb(110, 62, 0);
+}
+
+/* TEXT */
+#text1 {
+    top: 450px;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 0.1s;
+}
+
+#text2 {
+    top: 420px;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+#text3 {
+    top: 320px;
+    left: 770px;
+    animation-name: opacity-0-100;
+    animation-duration: 3s;
+    animation-delay: 14s;
+}
+
+#text4 {
+    top: 100px;
+    left: 950px;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 17s;
+}
+
+#text5 {
+    top: 320px;
+    left: 770px;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 17s;
+}
+
+#text6 {
+    top: 450px;
+    left: 770px;
+    animation-name: opacity-0-100;
+    animation-duration: 3s;
+    animation-delay: 30s;
+}
+
+#text7 {
+    top: 100px;
+    left: 950px;
+    animation-name: opacity-0-100;
+    animation-duration: 5s;
+    animation-delay: 22s;
+}
+/* ROLANDO FIGURE */
+#rolando-figure {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    left: -800px;
+    animation: rolando-walk 4s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+    z-index: 10;
+}
+
+#animation {
+    position: absolute;
+    animation-name: rolando-walk2;
+    animation-duration: 2s;
+    animation-delay: 20s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+
+#animation2 {
+    position: absolute;
+    animation-name: rolando-walk3;
+    animation-duration: 3s;
+    animation-delay: 33s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+/* KEYFRAMES */
+@keyframes moving-cloud {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(420px);
+    }
+}
+
+@keyframes rolando-walk {
+    0% {
+        top: 200px;
+        transform: skewX(-3deg);
+        left: -800px;
+    }
+
+    10% {
+        top: 215px;
+        transform: skewX(3deg);
+    }
+
+    20% {
+        top: 200px;
+        transform: skewX(-3deg);
+    }
+
+    30% {
+        top: 215px;
+        transform: skewX(3deg);
+    }
+
+    40% {
+        top: 200px;
+        transform: skewX(-3deg);
+    }
+
+    50% {
+        top: 215px;
+        transform: skewX(3deg);
+    }
+
+    60% {
+        top: 200px;
+        transform: skewX(-3deg);
+    }
+
+    70% {
+        top: 215px;
+        transform: skewX(3deg);
+    }
+
+    80% {
+        top: 200px;
+        left: -115px;
+        transform: skewX(-3deg);
+    }
+
+    100% {
+        left: -115px;
+        top: 80px;
+    }
+}
+
+@keyframes rolando-walk2 {
+    0% {
+        top: -20px;
+        left: 0px;
+    }
+
+    100% {
+        top: 120px;
+        left: 0px;
+    }
+}
+
+@keyframes rolando-walk3 {
+    0% {
+        top: 0px;
+        transform: skewX(3deg);
+        left: 0px;
+    }
+
+    25% {
+        top: -5px;
+        transform: skewX(-3deg);
+    }
+
+    50% {
+        top: 0px;
+        transform: skewX(3deg);
+    }
+
+    75% {
+        top: -5px;
+        transform: skewX(-3deg);
+    }
+
+    100% {
+        top: 0px;
+        left: 300px;
+    }
+}
+@keyframes scale-blackboard {
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+@keyframes big-blackboard-rotate {
+    25% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateX(-30px);
+    }
+}
+@keyframes moving-gonzales-portrait {
+    25% {
+        transform: translateY(-200px);
+    }
+
+    50% {
+        transform: translateX(600px);
+    }
+
+    75% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes clockAnimation {
+    0% {
+        top: 5px;
+        left: 49px;
+    }
+
+    12.5% {
+        top: 12px;
+        left: 60px;
+        transform: rotate(45deg);
+    }
+
+    25% {
+        top: 25px;
+        left: 70px;
+        transform: rotate(90deg);
+    }
+
+    37.5% {
+        top: 40px;
+        left: 69px;
+        transform: rotate(135deg);
+    }
+
+    50% {
+        top: 50px;
+        left: 50px;
+        transform: rotate(180deg);
+    }
+
+    62.5% {
+        top: 40px;
+        left: 35px;
+        transform: rotate(225deg);
+    }
+
+    75% {
+        top: 28px;
+        left: 24px;
+        transform: rotate(270deg);
+    }
+
+    87.5% {
+        top: 11px;
+        left: 30px;
+        transform: rotate(315deg);
+    }
+
+    100% {
+        top: 5px;
+        left: 49px;
+        transform: rotate(360deg);
+    }
+}
+@keyframes scale-animation {
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes rumble {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+@keyframes rumble-negative {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(-1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(1deg);
+    }
+}
+
+@keyframes opacity-0-100 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes chalk-drawing {
+    0% {
+        transform: rotate(-50deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+@keyframes laserEffect {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        box-shadow: 0 0 10px 3px blue;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+

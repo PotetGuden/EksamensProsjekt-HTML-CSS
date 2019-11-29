@@ -1,0 +1,1433 @@
+/* KODET AV JOSTEIN ERIKSEN (skulle vært en annen) */
+
+body {
+    background-color: rgb(22, 48, 48);
+}
+
+
+#container {
+    position: relative;
+    height: 720px;
+    width: 1280px;
+    background: linear-gradient(#011e36, #9eb2e7);
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+/* Text-bubbles, styling til forskjellige tekstbobbler som vises på siden */
+
+#text1 {
+    animation: textFly 30s infinite linear;
+}
+
+#text2 {
+    top: 350px;
+    left: 700px;
+    z-index: 2;
+    opacity: 0;
+    animation: moonwalk 1s linear;
+    animation-play-state: paused;
+}
+
+.text-bubbles {
+
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    filter: drop-shadow(4px 5px 6px);
+    font-family: fantasy;
+    width: 240px;
+    text-align: center;
+}
+
+/*  Måne        */
+
+#moon {
+    width: 100px;
+    height: 100px;
+    background: grey;
+    position: absolute;
+    border-radius: 50%;
+    right: -30px;
+    top: -30px;
+    box-shadow: 0 0 10px 10px white;
+    ;
+}
+
+/* Vinduer, de forskjellige vinduene til slottet. */
+.vinduer-style {
+    width: 30px;
+    height: 50px;
+    background: white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    border: 1px solid black;
+    box-shadow: inset 0 0 10px 1px black;
+}
+
+#vindu1 {
+    top: 231px;
+    left: 43px;
+    z-index: 2;
+}
+
+#vindu2 {
+    top: 231px;
+    left: 365px;
+    z-index: 2;
+}
+
+#vindu3 {
+    top: 131px;
+    left: 180px;
+    z-index: 2;
+}
+
+#vindu4 {
+    top: 131px;
+    left: 230px;
+    z-index: 2;
+}
+
+/* Guide, dette er stylingen til vår guide rundt på siden */
+
+#guide1 {
+    height: 250px;
+    width: auto;
+    top: 410px;
+    left: 510px;
+    position: absolute;
+    opacity: 0;
+    animation: moonwalk 1s linear;
+    animation-play-state: paused;
+}
+
+#guide {
+    height: 250px;
+    width: auto;
+    top: -110px;
+    left: -210px;
+    position: absolute;
+
+}
+
+/* Drage, her er det forskjellige deler som sammen skal representere en drage. */
+
+#drage-click {
+    position: absolute;
+    height: 175px;
+    width: 350px;
+    z-index: 20;
+    top: 150px;
+    left: 0;
+    opacity: 0;
+    animation: drageFly 30s infinite linear;
+    transform: rotateY(0deg);
+
+}
+
+
+#get-drage {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 100px;
+    top: 100px;
+    z-index: 5;
+    animation: drageFly 30s infinite linear;
+    transform: rotateY(0deg);
+
+}
+
+#drage-kropp {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    background: green;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    border: 1px solid black;
+}
+
+#drage-ben {
+    width: 20px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    top: 165px;
+    left: 0px;
+    transform: rotate(20deg);
+}
+
+#drage-øre {
+    width: 20px;
+    height: 40px;
+    background: green;
+    position: absolute;
+    top: -30px;
+    left: 40px;
+    border-radius: 40%;
+    transform: rotate(-30deg);
+}
+
+#drage-munn {
+    width: 10px;
+    height: 40px;
+    background: rgb(105, 100, 100);
+    position: absolute;
+    top: 20px;
+    left: 125px;
+    border-radius: 30%;
+    transform: rotate(-90deg);
+    border: 1px solid black;
+}
+
+#drage-flamme {
+    position: absolute;
+    border-bottom: 280px solid #c23e1e;
+    border-left: 350px solid transparent;
+    border-right: 350px solid transparent;
+    width: 350px;
+    bottom: 35px;
+    left: 135px;
+    opacity: 0.9;
+}
+
+#drage-flamme-hull {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    top: 20px;
+    left: 0px;
+}
+
+#drage-øye {
+    width: 30px;
+    height: 10px;
+    background: rgb(26, 3, 3);
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transform: rotate(-5deg);
+}
+
+#drage-øye-inni {
+    width: 8px;
+    height: 5px;
+    background: rgb(233, 231, 231);
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transform: rotate(-90deg);
+}
+
+#drage-hale {
+    width: 60px;
+    height: 10px;
+    background: rgb(26, 3, 3);
+    position: absolute;
+    top: 120px;
+    left: -40px;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transform: rotate(210deg);
+}
+
+#drage-fot {
+    width: 20px;
+    height: 8px;
+    background: green;
+    position: absolute;
+    top: 200px;
+    left: -5px;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transform: rotate(20deg);
+}
+
+#drage-arm {
+    width: 10px;
+    height: 40px;
+    background: green;
+    position: absolute;
+    top: 165px;
+    left: 190px;
+    transform: rotate(-50deg);
+}
+
+#drage-hode {
+    width: 150px;
+    height: 75px;
+    border-radius: 50%;
+    background: green;
+    position: absolute;
+    top: 90px;
+    left: 120px;
+    transform: rotate(-20deg);
+    animation: drageHodeRotate 2s infinite linear;
+}
+
+/* Fjell, dette er fjellet som slottet står oppå. */
+
+#fjell {
+    position: absolute;
+    border-bottom: 280px solid #251610;
+    border-left: 350px solid transparent;
+    border-right: 350px solid transparent;
+    width: 350px;
+    bottom: 0px;
+    left: 110px;
+}
+
+.fjell-steiner {
+    width: 75px;
+    height: 50px;
+    border-radius: 30%;
+    background: #251610;
+    position: absolute;
+}
+
+#stein1 {
+    left: -60px;
+    transform: rotate(-30deg);
+}
+
+#stein2 {
+    left: -80px;
+    top: 25px;
+    transform: rotate(-20deg);
+}
+
+#stein3 {
+    left: -130px;
+    top: 55px;
+    transform: rotate(-10deg);
+}
+
+#stein4 {
+    left: -160px;
+    top: 95px;
+    transform: rotate(10deg);
+}
+
+#stein5 {
+    left: -200px;
+    top: 125px;
+    transform: rotate(40deg);
+}
+
+#stein6 {
+    left: -240px;
+    top: 155px;
+    transform: rotate(-3deg);
+}
+
+#stein7 {
+    left: -300px;
+    top: 185px;
+    transform: rotate(-30deg);
+}
+
+#stein8 {
+    left: -340px;
+    top: 200px;
+}
+
+#stein9 {
+    left: -380px;
+    top: 250px;
+    transform: rotate(-30deg);
+}
+
+#stein10 {
+    left: 320px;
+    transform: rotate(-30deg);
+}
+
+#stein11 {
+    left: 350px;
+    top: 25px;
+    transform: rotate(-20deg);
+}
+
+#stein12 {
+    left: 390px;
+    top: 55px;
+    transform: rotate(-10deg);
+}
+
+#stein13 {
+    left: 440px;
+    top: 95px;
+    transform: rotate(10deg);
+}
+
+#stein14 {
+    left: 490px;
+    top: 125px;
+    transform: rotate(40deg);
+}
+
+#stein15 {
+    left: 530px;
+    top: 155px;
+    transform: rotate(-3deg);
+}
+
+#stein16 {
+    left: -590px;
+    top: 185px;
+    transform: rotate(-30deg);
+}
+
+#stein17 {
+    left: 570px;
+    top: 200px;
+}
+
+#stein18 {
+    left: 630px;
+    top: 250px;
+    transform: rotate(-30deg);
+}
+
+
+div {
+    position: absolute;
+}
+
+/*    Største delen av Fjellet som slottet står på     */
+#Bakke1 {
+    position: absolute;
+    border-bottom: 350px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    bottom: 0px;
+    width: 1150px;
+    color: #521002;
+}
+
+/* Path, dette er den stien som leder opp mot slottet. */
+
+.path-style {
+    position: absolute;
+    background: rgb(71, 77, 71);
+    width: 100px;
+    height: 100px;
+    border-radius: 45%;
+}
+
+#path1 {
+    top: 425px;
+    left: 500px;
+}
+
+#path2 {
+    top: 450px;
+    left: 470px;
+}
+
+#path3 {
+    top: 475px;
+    left: 500px;
+}
+
+#path4 {
+    top: 400px;
+    left: 550px;
+}
+
+#path5 {
+    top: 550px;
+    left: 550px;
+}
+
+#path6 {
+    top: 550px;
+    left: 500px;
+
+}
+
+#path7 {
+    top: 600px;
+    left: 500px;
+
+}
+
+#path8 {
+    top: 629px;
+    left: 550px;
+
+}
+
+#path9 {
+    top: 600px;
+    left: 590px;
+}
+
+#path10 {
+    top: 660px;
+    left: 600px;
+}
+
+#path11 {
+    top: 660px;
+    left: 660px;
+}
+
+#path12 {
+    top: 400px;
+    left: 620px;
+}
+
+#path13 {
+    top: 500px;
+    left: 550px;
+}
+
+#path14 {
+    top: 450px;
+    left: 550px;
+}
+
+#path15 {
+    top: 410px;
+    left: 480px;
+
+}
+
+#path16 {
+    top: 470px;
+    left: 580px;
+}
+
+/* Rain, styling til de forskjellige elementene som er del av regnet. */
+.rain {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.drop {
+    position: absolute;
+    background: linear-gradient(#23b6e2, #ffffff);
+    opacity: 2;
+    top: 25px;
+}
+
+.d1 {
+    left: 97%;
+    width: 2%;
+    height: 15%;
+    animation: fall .94s linear 0.69s infinite;
+}
+
+.d2 {
+    left: 18%;
+    width: 2%;
+    height: 15%;
+    animation: fall .98s linear 0.2s infinite;
+}
+
+.d3 {
+    left: 38%;
+    width: 2%;
+    height: 15%;
+    animation: fall .66s linear .60s infinite;
+}
+
+/* Background */
+
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    padding-top: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Clouds, stylingen til skyene som flyr rundt på siden. */
+
+.cloud {
+    background: #fefefe;
+    background: linear-gradient(to top, #fff 5%, #f1f1f1 100%);
+    border-radius: 100px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    position: absolute;
+    width: 350px;
+    
+}
+
+.cloud:after,
+.cloud:before {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-indeX: -1;
+}
+
+.cloud:after {
+    border-radius: 100px;
+
+    height: 100px;
+    left: 50px;
+    top: -50px;
+    width: 100px;
+}
+
+.cloud:before {
+    border-radius: 200px;
+
+    width: 180px;
+    height: 180px;
+    right: 50px;
+    top: -90px;
+}
+
+/* Lava, Her er begge effektene som får det til å fremstå som det er levende lava som er rundt fjellet. */
+#lava-div {
+    width: 1280px;
+    height: 300px;
+    bottom: 0px;
+    position: absolute;
+    background: linear-gradient(to right, #fdc830, #f37335);
+    background-size: 400% 400%;
+    animation: lavaBackgroundAnimation 2s linear infinite;
+    background-position: center;
+}
+
+.lava-bubbles {
+    width: 10px;
+    height: 15px;
+    background: linear-gradient(to right, #c4712e, #f37335);
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    animation: lavaJump1 2s linear infinite;
+    top: 0px;
+    opacity: 0;
+}
+
+#lava1 {
+    left: 150px;
+    animation: lavaJump1 2s linear infinite;
+    animation-delay: 0.2s;
+}
+
+#lava2 {
+    left: 260px;
+    animation: lavaJump1 2s linear infinite;
+    animation-delay: 0.8s;
+}
+
+#lava3 {
+    left: 900px;
+    animation: lavaJump1 2s linear infinite;
+    animation-delay: 0.5s;
+}
+
+#lava4 {
+    left: 1050px;
+    animation: lavaJump1 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+#lava5 {
+    top: 100px;
+    left: 1000px;
+    animation: lavaJump2 2s linear infinite;
+    animation-delay: 0.6s;
+}
+
+#lava6 {
+    top: 100px;
+    left: 320px;
+    animation: lavaJump2 2s linear infinite;
+    animation-delay: 1.7s;
+}
+
+#lava7 {
+    top: 100px;
+    left: 30px;
+    animation: lavaJump2 2s linear infinite;
+    animation-delay: 1.3s;
+}
+
+#lava8 {
+    top: 210px;
+    left: 1150px;
+    animation: lavaJump3 2s linear infinite;
+    animation-delay: 0.3s;
+}
+
+#lava9 {
+    top: 210px;
+    left: 80px;
+    animation: lavaJump3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+#lava10 {
+    top: 210px;
+    left: 1250px;
+    animation: lavaJump3 2s linear infinite;
+    animation-delay: 1.8s;
+}
+
+/* Slott, dette er sammensettningen av alle elementene som sammen skal fremstå som et slott. */
+
+#slott {
+    width: 430px;
+    height: 380px;
+    background: transparent;
+    position: absolute;
+    top: 61px;
+    left: 420px;
+}
+
+#venstre-tårn {
+    width: 120px;
+    height: 60px;
+    bottom: 100px;
+    left: 20px;
+    position: absolute;
+}
+
+#høyre-tårn {
+    width: 120px;
+    height: 60px;
+    bottom: 100px;
+    right: 10px;
+    position: absolute;
+}
+
+#hoved-tårn {
+    width: 120px;
+    height: 180px;
+    bottom: 100px;
+    left: 160px;
+    position: absolute;
+}
+
+#bunn-tårn {
+    width: 400px;
+    height: 90px;
+    bottom: 1px;
+    right: 10px;
+    position: absolute;
+}
+
+#venstre-tårn-tak {
+    width: 140px;
+    height: 20px;
+    bottom: 160px;
+    left: 10px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#venstre-del1 {
+    width: 30px;
+    height: 15px;
+    bottom: 20px;
+    left: 0px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#venstre-del2 {
+    width: 30px;
+    height: 15px;
+    bottom: 20px;
+    left: 55px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#venstre-del3 {
+    width: 30px;
+    height: 15px;
+    bottom: 20px;
+    left: 110px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#høyre-tårn-tak {
+    width: 140px;
+    height: 20px;
+    bottom: 160px;
+    left: 290px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#høyre-del1 {
+    width: 30px;
+    height: 15px;
+    bottom: 20px;
+    left: 0px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#høyre-del2 {
+    width: 30px;
+    height: 15px;
+    bottom: 20px;
+    left: 55px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#høyre-del3 {
+    width: 30px;
+    height: 15px;
+    bottom: 20px;
+    left: 110px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#trekant-tak {
+    width: 0px;
+    height: 0px;
+    bottom: 287px;
+    left: 140px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    border-width: 0px 80px 70px 80px;
+
+}
+
+.tårn-farge {
+    background: grey;
+}
+
+/* Bricks, disse elementene er med å få det til å se ut som slottet har en oppbyggning av stein. */
+
+.bricks:nth-child(n) {
+    width: 39px;
+    height: 30px;
+    background: grey;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+
+.bricks:nth-child(1) {
+    top: 220px;
+    left: 20px;
+}
+
+.bricks:nth-child(2) {
+    top: 220px;
+    left: 60px;
+}
+
+.bricks:nth-child(3) {
+    top: 220px;
+    left: 100px;
+}
+
+.bricks:nth-child(4) {
+    top: 251px;
+    left: 20px;
+}
+
+.bricks:nth-child(5) {
+    top: 251px;
+    left: 60px;
+}
+
+.bricks:nth-child(6) {
+    top: 251px;
+    left: 100px;
+}
+
+.bricks:nth-child(7) {
+    top: 283px;
+    left: 20px;
+}
+
+.bricks:nth-child(8) {
+    top: 283px;
+    left: 60px;
+}
+
+.bricks:nth-child(9) {
+    top: 283px;
+    left: 100px;
+}
+
+.bricks:nth-child(10) {
+    top: 315px;
+    left: 20px;
+}
+
+.bricks:nth-child(11) {
+    top: 315px;
+    left: 60px;
+}
+
+.bricks:nth-child(12) {
+    top: 315px;
+    left: 100px;
+}
+
+.bricks:nth-child(13) {
+    top: 347px;
+    left: 20px;
+}
+
+.bricks:nth-child(14) {
+    top: 347px;
+    left: 60px;
+}
+
+.bricks:nth-child(15) {
+    top: 347px;
+    left: 100px;
+}
+
+/*midten av tårn */
+.bricks:nth-child(16) {
+    top: 347px;
+    left: 140px;
+}
+
+.bricks:nth-child(17) {
+    top: 347px;
+    left: 180px;
+}
+
+.bricks:nth-child(18) {
+    top: 347px;
+    left: 220px;
+}
+
+.bricks:nth-child(19) {
+    top: 347px;
+    left: 260px;
+}
+
+.bricks:nth-child(20) {
+    top: 347px;
+    left: 300px;
+}
+
+.bricks:nth-child(21) {
+    top: 347px;
+    left: 340px;
+}
+
+.bricks:nth-child(22) {
+    top: 347px;
+    left: 380px;
+}
+
+.bricks:nth-child(23) {
+    top: 315px;
+    left: 140px;
+}
+
+.bricks:nth-child(24) {
+    top: 315px;
+    left: 180px;
+}
+
+.bricks:nth-child(25) {
+    top: 315px;
+    left: 220px;
+}
+
+.bricks:nth-child(26) {
+    top: 315px;
+    left: 260px;
+}
+
+.bricks:nth-child(27) {
+    top: 315px;
+    left: 300px;
+}
+
+.bricks:nth-child(28) {
+    top: 315px;
+    left: 340px;
+}
+
+.bricks:nth-child(29) {
+    top: 315px;
+    left: 380px;
+}
+
+.bricks:nth-child(30) {
+    top: 283px;
+    left: 140px;
+}
+
+.bricks:nth-child(31) {
+    top: 283px;
+    left: 180px;
+}
+
+.bricks:nth-child(32) {
+    top: 283px;
+    left: 220px;
+}
+
+.bricks:nth-child(33) {
+    top: 283px;
+    left: 260px;
+}
+
+.bricks:nth-child(34) {
+    top: 283px;
+    left: 300px;
+}
+
+.bricks:nth-child(35) {
+    top: 283px;
+    left: 340px;
+}
+
+.bricks:nth-child(36) {
+    top: 283px;
+    left: 380px;
+}
+
+.bricks:nth-child(37) {
+    top: 251px;
+    left: 300px;
+}
+
+.bricks:nth-child(38) {
+    top: 251px;
+    left: 340px;
+}
+
+.bricks:nth-child(39) {
+    top: 251px;
+    left: 380px;
+}
+
+.bricks:nth-child(40) {
+    top: 220px;
+    left: 300px;
+}
+
+.bricks:nth-child(41) {
+    top: 220px;
+    left: 340px;
+}
+
+.bricks:nth-child(42) {
+    top: 220px;
+    left: 380px;
+}
+
+.bricks:nth-child(43) {
+    top: 251px;
+    left: 160px;
+}
+
+.bricks:nth-child(44) {
+    top: 251px;
+    left: 200px;
+}
+
+.bricks:nth-child(45) {
+    top: 251px;
+    left: 240px;
+}
+
+.bricks:nth-child(46) {
+    top: 220px;
+    left: 160px;
+}
+
+.bricks:nth-child(47) {
+    top: 220px;
+    left: 200px;
+}
+
+.bricks:nth-child(48) {
+    top: 220px;
+    left: 240px;
+}
+
+.bricks:nth-child(49) {
+    top: 188px;
+    left: 160px;
+}
+
+.bricks:nth-child(50) {
+    top: 188px;
+    left: 200px;
+}
+
+.bricks:nth-child(51) {
+    top: 188px;
+    left: 240px;
+}
+
+.bricks:nth-child(52) {
+    top: 156px;
+    left: 160px;
+}
+
+.bricks:nth-child(53) {
+    top: 156px;
+    left: 200px;
+}
+
+.bricks:nth-child(54) {
+    top: 156px;
+    left: 240px;
+}
+
+.bricks:nth-child(55) {
+    top: 124px;
+    left: 160px;
+}
+
+.bricks:nth-child(56) {
+    top: 124px;
+    left: 200px;
+}
+
+.bricks:nth-child(57) {
+    top: 124px;
+    left: 240px;
+}
+
+.bricks:nth-child(58) {
+    top: 92px;
+    left: 160px;
+}
+
+.bricks:nth-child(59) {
+    top: 92px;
+    left: 200px;
+}
+
+.bricks:nth-child(60) {
+    top: 92px;
+    left: 240px;
+}
+
+/*  Door, dette her er døren som sitter midt på slottet og blir brukt som en vei videre på siden.  */
+#dør {
+    width: 60px;
+    height: 70px;
+    position: absolute;
+    bottom: 1px;
+    left: 190px;
+    background: rgb(58, 37, 9);
+    z-index: 2;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 1px solid black;
+}
+
+
+#dør-håndtak {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 18px;
+    top: 40px;
+    background: black;
+    border-radius: 50%;
+}
+
+.x1 {
+    animation: animateCloud 35s linear infinite;
+    transform: scale(0.65);
+}
+
+.x2 {
+    animation: animateCloud2 20s linear infinite;
+
+    transform: scale(0.3);
+}
+
+.x3 {
+
+    animation: animateCloud2 30s linear infinite;
+
+    transform: scale(0.5);
+}
+
+.x4 {
+
+    animation: animateCloud 18s linear infinite;
+    transform: scale(0.4);
+}
+
+.x5 {
+    animation: animateCloud 25s linear infinite;
+    transform: scale(0.55);
+}
+
+
+/* CSS Events */
+#drage-click:checked{
+    animation-play-state: paused;
+}
+
+#drage-click:checked ~ #get-drage {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+#drage-click:checked ~ #text1 {
+    opacity: 0;
+    animation-play-state: paused;
+}
+
+#drage-click:checked ~ #text2 {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+#drage-click:checked ~ #guide1 {
+    opacity: 1;
+    animation-play-state: running;
+}
+#dør:hover {
+    border-color: darkolivegreen;
+    border-width: 3px;
+    left: 187;
+    top: -3;
+}
+
+
+
+
+
+
+/* KEYFRAMES */
+
+/* Moonwalk, dette er en animasjon som skal spilles etter at man har klikket bort dragen, da vil denne animasjonen spilles av som en slags jubel.  */
+@keyframes moonwalk {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateY(-20px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateY(15px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateY(-7px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateY(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(-1.2deg);
+    }
+}
+
+/* DrageFly, dette er en animation som får dragen til å fly rundt */
+@keyframes drageFly {
+    53% {
+        left: 1300px;
+        transform: rotateY(0deg);
+    }
+
+    55% {
+        transform: rotateY(-180deg);
+    }
+
+    86% {
+        left: -100px;
+        transform: rotateY(-180deg);
+    }
+
+    90% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        left: 100px;
+        transform: rotateY(0deg);
+    }
+}
+
+/*  textFly, dette er en animation for å få tekstboksen til å følge dragen.    */
+
+@keyframes textFly {
+    0% {
+        left: 100px;
+    }
+
+    53% {
+        left: 1300px;
+    }
+
+
+    86% {
+        left: -100px;
+    }
+
+    100% {
+        left: 100px;
+    }
+}
+
+/*  LavaJump, dette er animationene for å få de livlige lava "bobblene" til å sprette opp av lavaen.    */
+@keyframes lavaJump1 {
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        top: -20px;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: 0px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lavaJump2 {
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        top: 80px;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: 100px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lavaJump3 {
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        top: 190px;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: 210px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lavaBackgroundAnimation {
+
+    20% {
+        background-position: left;
+    }
+
+    40% {
+        background-position: top;
+    }
+
+    60% {
+        background-position: right;
+    }
+
+    80% {
+        background-position: bottom;
+    }
+
+    100% {
+        background-position: center;
+    }
+}
+
+/*  Fall, dette er animationen for å få regndråpene til å     */
+@keyframes fall {
+    to {
+        margin-top: 300px;
+        opacity: 1;
+    }
+}
+
+/* drageHodeRotate, dette er animationen som gjør hodet til dragen mere livlig.    */
+
+@keyframes drageHodeRotate {
+    33% {
+        transform: rotate(0deg);
+    }
+
+    66% {
+        transform: rotate(-40deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+/*  animateCloud, er her for å få skyene til å fly over skjermen  */
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -300px;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud2 {
+    0% {
+        margin-left: 300px;
+    }
+
+    50% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+/* ANIMATIONS */

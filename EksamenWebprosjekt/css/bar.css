@@ -1,0 +1,1372 @@
+/* KODET AV EN ELEV MED HJELP AV JOSTEIN */
+
+body {
+    background-color: rgb(22, 48, 48);
+}
+
+/* Hoved div */
+#main-container {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* felles tekstboble mal */
+
+.tekstboble {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 6px);
+    text-align: center;
+    font-family: fantasy;
+    width: 100px;
+    padding: 5px;
+    z-index: 6;
+    top: -30px;
+    left: -30px;
+    font-size:10px;
+}
+
+/* ALL STYLING AV ALLE DIVS */
+
+/* tekstbobla */
+#tekst1 {
+    opacity: 0;
+    animation: showtekst1 4s;
+    animation-delay: 3.2s;
+}
+
+#tekst2 {
+    opacity: 0;
+    animation: showtekst2 3s;
+    animation-delay: 9s;
+}
+
+#tekst3 {
+    opacity: 0;
+    animation: showtekst3 5s;
+    animation-delay: 12s;
+}
+
+
+/* neon lyset*/
+
+#color-me-wild {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 100;
+    position: absolute;
+    font-family: cursive;
+    top: 2px;
+    left: 120px;
+    text-shadow: 0px 0px 10px yellow,
+        0px 0px 20px yellow,
+        0px 0px 30px yellow,
+        0px 0px 40px yellow,
+        0px 0px 50px yellow,
+        0px 0px 60px yellow;
+
+
+}
+
+/* bar logo på skiltet */
+
+#bar-navn {
+    color: lightblue;
+    font-size: 60px;
+    font-weight: 100;
+    position: absolute;
+    font-family: cursive;
+    left: 270px;
+    top: 15px;
+    text-shadow: 0px 0px 10px #9D00FF,
+        0px 0px 20px #9D00FF,
+        0px 0px 30px #9D00FF,
+        0px 0px 40px #9D00FF,
+        0px 0px 50px #9D00FF,
+        0px 0px 60px #9D00FF;
+}
+
+/* veggene i bakgrunnen */
+
+#vegg1 {
+    position: absolute;
+    border-bottom: 830px solid rgb(65, 22, 22);
+    border-left: 400px solid transparent;
+    border-right: 600px solid transparent;
+    height: 0px;
+    width: 300px;
+    top: -85px;
+    left: -675px;
+    transform: rotate(90deg);
+    z-index: 0;
+}
+
+#vegg2 {
+    width: 980px;
+    height: 100px;
+    border-bottom: 400px solid rgb(65, 22, 22);
+    position: absolute;
+    left: 300px;
+    top: -60px;
+    z-index: 0;
+
+}
+
+/* danse gulvet */
+
+#dansegulv {
+    width: 1500px;
+    height: 200px;
+    border-bottom: 500px solid rgb(00, 00, 00);
+    position: absolute;
+    left: -5px;
+    top: 120px;
+    z-index: 0;
+    transform: rotate(5deg);
+    animation: DanceFloor alternate 0.2s infinite;
+    filter: blur(10px);
+
+}
+
+.dansegulv2 {
+    width: 300px;
+    height: 400px;
+    background: blue;
+    position: absolute;
+    left: 500px;
+    top: 250px;
+    opacity: 1;
+    z-index: 0;
+    transform: rotate(5deg);
+    animation: dancefloor2 alternate 0.3s infinite;
+
+}
+
+.dansegulv3 {
+    width: 500px;
+    height: 500px;
+    background: blue;
+    position: absolute;
+    left: 1100px;
+    top: 275px;
+    opacity: 1;
+    z-index: 0;
+    transform: rotate(5deg);
+    animation: dancefloor3 alternate 0.2s infinite;
+
+}
+
+
+
+
+
+
+
+/* skiltet over baren */
+
+
+#bar-skilt {
+    width: 600px;
+    height: 150px;
+    position: absolute;
+    left: 680px;
+    opacity: 1;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px lightblue;
+    background: linear-gradient(to right, #4ecdc4, #556270);
+}
+
+#flaske-skilt1 {
+    width: 50px;
+    height: 80px;
+    background: linear-gradient(-220deg, #fceabb, #f8b500);
+    position: absolute;
+    border: 3px solid black;
+    left: 520px;
+    top: 50px;
+    border-radius: 20%;
+    transform: rotate(25deg);
+    background-size: 400% 400%;
+    background-position: center;
+    box-shadow: 0 0 10px 5px yellow;
+    animation: flaskeInnholdAnimasjon 3s infinite linear;
+
+}
+
+#flaske-skilt2 {
+    width: 50px;
+    height: 80px;
+    background: linear-gradient(-220deg, #fceabb, #f8b500);
+    position: absolute;
+    border: 3px solid black;
+    left: 520px;
+    top: 50px;
+    border-radius: 20%;
+    transform: rotate(-25deg);
+    background-size: 400% 400%;
+    background-position: center;
+    box-shadow: 0 0 10px 5px yellow;
+    animation: flaskeInnholdAnimasjon 3s infinite linear;
+
+}
+
+/* flaska rolando holder etter å ha bestilt i baren */
+
+
+#flaske3 {
+    position: absolute;
+    left: -470px;
+    animation: flaskeanim 1s linear;
+    animation-delay: -8s;
+
+}
+
+#flaske-skilt3 {
+    width: 50px;
+    height: 80px;
+    background: linear-gradient(-220deg, #fceabb, #f8b500);
+    position: absolute;
+    border: 3px solid black;
+    left: 510px;
+    top: 0px;
+    border-radius: 20%;
+    transform: rotate(140deg) scale(0.5);
+    background-size: 400% 400%;
+    background-position: center;
+    box-shadow: 0 0 10px 5px yellow;
+    animation: flaskeanim 13s;
+    z-index: 5;
+
+}
+
+
+
+#flaske-tut3 {
+    width: 15px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    border: 3px solid black;
+    left: 550px;
+    top: 50px;
+    border-radius: 20%;
+    transform: rotate(140deg) scale(0.5);
+    animation: flaskeanim 13s;
+    z-index: 5;
+
+
+}
+
+
+
+
+
+/* flasker for barskiltet */
+
+#flaske-tut1 {
+    width: 15px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    border: 3px solid black;
+    left: 560px;
+    top: 25px;
+    border-radius: 20%;
+    transform: rotate(25deg);
+
+
+}
+
+#flaske-tut2 {
+    width: 15px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    border: 3px solid black;
+    left: 515px;
+    top: 25px;
+    border-radius: 20%;
+    transform: rotate(-25deg);
+
+
+}
+
+#flaske2 {
+    position: absolute;
+    left: -470px;
+}
+
+/* bar objekter */
+
+#bar-vegg {
+    width: 680px;
+    height: 100px;
+    background: linear-gradient(to right, #000428, #004e92);
+    position: absolute;
+    left: 650px;
+    top: 340px;
+    opacity: 1;
+    z-index: 2;
+}
+
+#bar-benk {
+    width: 750px;
+    height: 40px;
+    position: absolute;
+    left: 660px;
+    top: 310px;
+    z-index: 2;
+    transform: skewX(-60deg);
+    background: linear-gradient(-90deg, #1e130c, #9a8478);
+
+
+}
+
+#bar-stol-bein1 {
+    width: 10px;
+    height: 70px;
+    position: absolute;
+    left: 725px;
+    top: 400px;
+    z-index: 2;
+    background: red;
+
+
+}
+
+#bar-stol-bein2 {
+    width: 10px;
+    height: 70px;
+    position: absolute;
+    left: 900px;
+    top: 400px;
+    z-index: 2;
+    background: red;
+
+
+}
+
+#bar-stol-bein3 {
+    width: 10px;
+    height: 70px;
+    position: absolute;
+    left: 1075px;
+    top: 400px;
+    z-index: 2;
+    background: red;
+
+
+}
+
+#bar-stol-bein3 {
+    width: 10px;
+    height: 70px;
+    position: absolute;
+    left: 1075px;
+    top: 400px;
+    z-index: 2;
+    background: red;
+
+
+}
+
+#bar-stol-sete1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 1055px;
+    top: 375px;
+    z-index: 2;
+    border-radius: 30px;
+    transform: scale(2, 0.5);
+    background: gray;
+
+
+}
+
+#bar-stol-sete2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 880px;
+    top: 375px;
+    z-index: 2;
+    border-radius: 30px;
+    transform: scale(2, 0.5);
+    background: gray;
+
+
+}
+
+#bar-stol-sete3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 705px;
+    top: 375px;
+    z-index: 2;
+    border-radius: 30px;
+    transform: scale(2, 0.5);
+    background: gray;
+
+
+}
+
+#bar-lys1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 690px;
+    top: 120px;
+    z-index: 1;
+}
+
+#bar-lys2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 825px;
+    top: 120px;
+    z-index: 1;
+}
+
+#bar-lys3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 970px;
+    top: 120px;
+    z-index: 1;
+}
+
+#bar-lys4 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1120px;
+    top: 120px;
+    z-index: 1;
+}
+
+
+#hoytalerboks {
+    width: 150px;
+    height: 250px;
+    position: absolute;
+    left: 445px;
+    top: 190px;
+    z-index: 2;
+    background: black;
+
+}
+
+#hoytalerboksliten {
+    width: 150px;
+    height: 250px;
+    position: absolute;
+    left: 190px;
+    top: 285px;
+    z-index: 2;
+    background: black;
+    transform: scale(0.5) skewY(-36deg);
+
+}
+
+.hoytaler1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 35px;
+    top: 150px;
+    z-index: 2;
+    border-radius: 80px;
+    background: grey;
+    animation: bass 0.5s infinite;
+}
+
+.hoytaler2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 45px;
+    top: 60px;
+    z-index: 2;
+    border-radius: 60px;
+    background: grey;
+    animation: bass 0.5s infinite;
+}
+
+
+/* play knappen for høytaleren */
+
+.htmltriangle {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-bottom: solid 30px white;
+    border-right: solid 10px transparent;
+    border-left: solid 10px transparent;
+    left: 60px;
+    top: 5px;
+    transform: rotate(90deg);
+}
+
+/* gjemme lydknappen bak play knappen */
+
+#audio {
+    position: absolute;
+    left: 45px;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    z-index: 2;
+    opacity: 0;
+
+
+}
+
+
+
+#bass {
+    width: 150px;
+    position: absolute;
+}
+
+/*inngangsdør*/
+
+#inngangs-dor {
+    width: 180px;
+    height: 320px;
+    position: absolute;
+    background-color: rgb(58, 37, 37);
+    left: 30px;
+    bottom: 127px;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border: 1px solid black;
+    z-index: 2;
+    transform: skewY(-36deg) scale(0.9);
+
+
+}
+
+
+
+#knob-back {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 150px;
+    left: 30px;
+}
+
+#window-backdoor {
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid black;
+    top: 20px;
+    left: 40px;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+
+}
+
+#doorline {
+    width: 3px;
+    height: 320px;
+    background: black;
+    position: absolute;
+    left: 90px;
+    z-index: 2;
+}
+
+/* discokulen */
+
+
+#discokule {
+    width: 150px;
+    height: 150px;
+    background: whitesmoke;
+    position: absolute;
+    border-radius: 50%;
+    top: 60px;
+    left: 200px;
+    z-index: 1;
+}
+
+#discoballlinje {
+    width: 4px;
+    height: 180px;
+    background: white;
+    position: absolute;
+    left: 270px;
+    bottom: 655px;
+    z-index: 1;
+
+}
+
+#lysbryter {
+    width: 30px;
+    height: 30px;
+    top: 250px;
+    position: absolute;
+    left: 390px;
+    background: white;
+    z-index: 2;
+}
+
+#lysbryter-knapp {
+    width: 10px;
+    height: 10px;
+    top: 255px;
+    position: absolute;
+    left: 394px;
+    background: white;
+    z-index: 2;
+    border: 5px solid black;
+}
+
+
+
+#discoballen {
+    width: 30px;
+    height: 30px;
+    top: 250px;
+    left: 390px;
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+}
+
+
+
+/* blinking av neon lys */
+
+
+span.flickering-1 {
+    animation: flickering-1 2s infinite;
+
+}
+
+span.flickering-2 {
+    animation: flickering-2 1s infinite;
+}
+
+span.flickering-3 {
+    animation: flickering-3 3s infinite;
+}
+
+
+/* strobelys */
+
+
+
+.lys1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    left: 590px;
+    animation: strobelys alternate 0.1s infinite;
+}
+
+.lys2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 490px;
+    border-radius: 30px;
+    animation: strobelys alternate 0.1s infinite;
+}
+
+.lys3 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 390px;
+    border-radius: 30px;
+    animation: strobelys alternate 0.1s infinite;
+}
+
+
+
+/* lyset som følger strobelyset */
+
+.light-effect {
+    border-bottom: 200px solid lightblue;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    position: absolute;
+    left: 540px;
+    top: 45px;
+    width: 30px;
+    opacity: 0.05;
+}
+
+
+
+#lys1 {
+    position: absolute;
+    animation: discolights1 1s infinite linear;
+}
+
+
+#lys2 {
+    position: absolute;
+    left: 340px;
+    animation: discolights2 1s infinite linear;
+}
+
+#lys3 {
+    position: absolute;
+    left: 440px;
+    animation: discolights3 1s infinite linear;
+}
+
+/* lysa over baren */
+
+
+
+#barlys1 {
+    position: absolute;
+    left: 670px;
+    top: 190px;
+    border-bottom: 90px solid yellow;
+}
+
+#barlys2 {
+    position: absolute;
+    left: 800px;
+    top: 190px;
+    border-bottom: 90px solid yellow;
+}
+
+#barlys3 {
+    position: absolute;
+    left: 950px;
+    top: 190px;
+    border-bottom: 90px solid yellow;
+}
+
+#barlys4 {
+    position: absolute;
+    left: 1100px;
+    top: 190px;
+    border-bottom: 90px solid yellow;
+}
+
+#bar-bilde {
+    width: 75px;
+    height: 75px;
+    border: 5px solid black;
+    position: absolute;
+    top: 75px;
+    left: 475px;
+    z-index: 2;
+}
+
+#bar-tender {
+    width: 150px;
+    height: 150px;
+    content: url(/images/bartender.png);
+    position: absolute;
+    top: 185px;
+    left: 900px;
+    z-index: 1;
+}
+
+
+/* kroppen til rolando */
+
+#rolando-body {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 5;
+}
+
+#rolando-arm1 {
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    top: 73px;
+    left: 56px;
+    animation: spinArm1 0.5s infinite linear;
+    animation-delay: 10.5s;
+}
+
+
+#rolando-arm2 {
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    left: 110px;
+    top: 75px;
+    animation: spinArm2 1s infinite linear;
+    animation-delay: 10.5s;
+}
+
+
+#whole-rolando {
+    position: absolute;
+    top: 320px;
+    left: 50px;
+    z-index: 6;
+    transform: scale(1.5);
+}
+
+
+.animation2 {
+    position: absolute;
+    animation: rolandoWalk 4s linear forwards;
+    animation-delay: 7.5s;
+
+}
+
+
+
+.animation1 {
+    animation: rolandoJump 1.5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+.animation3 {
+    position: absolute;
+    z-index: 6;
+    animation: rolandoShake 0.5s linear infinite;
+    animation-delay: 10.5s;
+}
+
+
+
+
+#text2 {
+    opacity: 0;
+    animation: textAppear 1s linear forwards;
+    animation-delay: 8s;
+}
+
+
+
+#text1 {
+    animation: textDissapear 1s linear forwards;
+    animation-delay: 6s;
+}
+
+
+/* ALLE HOVERS/ACTIVE/CHECKED/OSV */
+
+
+/* lysbryter for å starte discokulen */
+
+#discoballen:checked ~ #discokule {
+    animation: discoballight 0.5s linear infinite;
+}
+
+
+
+/* keyframes */
+
+/*showtekst viser teksten på tekstbobla */
+
+@keyframes showtekst1 {
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showtekst2 {
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showtekst3 {
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* dansegulvet */
+
+@keyframes DanceFloor {
+    from {
+        border-bottom-color: yellow;
+    }
+
+    42% {
+        border-bottom-color: orange;
+    }
+}
+
+@keyframes dancefloor2 {
+    0% {
+        background-color: blue;
+    }
+
+    25% {
+        background: linear-gradient(blue, yellow);
+
+    }
+
+    100% {
+        background-color: yellow;
+        filter: blur(10px);
+    }
+}
+
+@keyframes dancefloor3 {
+    0% {
+        background-color: blue;
+    }
+
+    25% {
+        background: linear-gradient(orangered, yellow);
+
+    }
+
+    100% {
+        background-color: yellow;
+        filter: blur(10px);
+    }
+}
+
+/* drikke fra baren */
+
+
+@keyframes flaskeanim {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* flaske innholdet på flaskene på skiltet */
+
+@keyframes flaskeInnholdAnimasjon {
+    33% {
+        background-position: top left;
+    }
+
+    66% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: center;
+    }
+}
+
+/* discoballlyset samt spin */
+@keyframes discoballight {
+    0% {
+        background: yellow;
+        transform: rotate(360deg);
+
+    }
+
+    33% {
+        background: linear-gradient(white, yellow);
+        transform: rotate(360deg);
+
+
+    }
+
+    100% {
+        background: blue;
+        transform: rotate(360deg);
+
+    }
+}
+
+/* bass for høytaleren */
+
+@keyframes bass {
+    0% {
+        transform: scale(1);
+        filter: blur(10px);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes pulsating {
+    0% {
+        text-shadow: 0px 0px 0px;
+        opacity: 0;
+    }
+
+    50% {
+        text-shadow: 0px 0px 10px #33FF00,
+            0px 0px 20px #33FF00,
+            0px 0px 30px #33FF00,
+            0px 0px 40px #33FF00,
+            0px 0px 50px #33FF00,
+            0px 0px 60px #33FF00;
+        opacity: 1;
+    }
+
+    100% {
+        text-shadow: 0px 0px 0px;
+        opacity: 0;
+    }
+}
+
+/* blinking av neon lys som er over skiltet slik at det ser ut som neon lys*/
+@keyframes flickering-1 {
+    0% {
+        opacity: 1;
+    }
+
+    52% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    56% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flickering-2 {
+    0% {
+        opacity: 1;
+    }
+
+    62% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    69% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    73% {
+        opacity: 0;
+    }
+
+    74% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flickering-3 {
+    0% {
+        opacity: 1;
+    }
+
+    82% {
+        opacity: 1;
+    }
+
+    84% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 0;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    91% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* storbelyset*/
+
+@keyframes strobelys {
+    0% {
+        background-color: blue;
+    }
+
+    25% {
+        background: linear-gradient(white, yellow);
+
+    }
+
+    100% {
+        background-color: white;
+        filter: blur(10px);
+    }
+}
+
+/* discolys som beveger seg fram og tilbake, for strobelys effekten */
+
+@keyframes discolights1 {
+    33% {
+        border-bottom: 200px solid red;
+        transform: skewX(-20deg);
+        left: 500px;
+
+    }
+
+    66% {
+        border-bottom: 200px solid green;
+        transform: skewX(20deg);
+        left: 560px;
+    }
+
+    100% {
+        border-bottom: 200px solid lightblue;
+        transform: skewX(0deg);
+        left: 540px;
+
+    }
+}
+
+@keyframes discolights2 {
+    33% {
+        border-bottom: 200px solid red;
+        transform: skewX(-20deg);
+        left: 300px;
+
+    }
+
+    66% {
+        border-bottom: 200px solid green;
+        transform: skewX(20deg);
+        left: 360px;
+    }
+
+    100% {
+        border-bottom: 200px solid lightblue;
+        transform: skewX(0deg);
+        left: 340px;
+
+    }
+}
+
+@keyframes discolights3 {
+    33% {
+        border-bottom: 200px solid red;
+        transform: skewX(-20deg);
+        left: 400px;
+
+    }
+
+    66% {
+        border-bottom: 200px solid green;
+        transform: skewX(20deg);
+        left: 460px;
+    }
+
+    100% {
+        border-bottom: 200px solid lightblue;
+        transform: skewX(0deg);
+        left: 440px;
+
+    }
+}
+
+/* armen til rolando som spinner på dansegulvet */
+
+
+@keyframes spinArm1 {
+    0% {
+        top: 73px;
+    }
+
+    50% {
+        top: 55px;
+        transform: rotate(120deg);
+    }
+
+    100% {
+        top: 73px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes spinArm2 {
+    0% {
+        top: 73px;
+    }
+
+    50% {
+        top: 55px;
+        transform: rotate(-120deg);
+    }
+
+    100% {
+        top: 73px;
+        transform: rotate(0deg);
+    }
+}
+
+/* rolando når han kommer inn */
+
+@keyframes rolandoJump {
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: skewX(2deg);
+        transform: scale(1.5);
+
+
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: skewX(-2deg);
+        transform: scale(1.5);
+
+    }
+
+    100% {
+        top: 220px;
+        left: 200px;
+        transform: scale(1.5);
+
+    }
+}
+
+/*rolando danser */
+
+
+@keyframes rolandoShake {
+    33% {
+        top: 0px;
+    }
+
+    66% {
+
+        top: -20px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* rolando som går til baren og til dansegulvet */
+
+@keyframes rolandoWalk {
+    0% {
+        top: 0px;
+        left: 0px;
+
+    }
+
+    50% {
+        left: 750px;
+        top: 0px;
+
+    }
+
+    80% {
+        left: 750px;
+        top: 0px;
+
+    }
+
+    100% {
+        top: 200px;
+        left: 600px;
+    }
+
+}
+
+/* teksten som fosvinner (tekstbobla) */
+
+@keyframes textDissapear {
+    100% {
+        opacity: 0;
+    }
+}
+
+/* teksten som kommer (tekstbobla) */
+@keyframes textAppear {
+    100% {
+        opacity: 1;
+    }
+}

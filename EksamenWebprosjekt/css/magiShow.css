@@ -1,0 +1,1732 @@
+/* KODET AV JOSTEIN ERIKSEN */
+body{
+    background-color: rgb(22, 48, 48);
+}
+
+/* Hoved div */
+#main-container {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    /* Gjør bakgrunnsbilde større enn diven og gjør en animasjon som
+        flytter på posisjonen til bakgrunnsbilde som vil lage en kul 
+        gradient color animasjon */
+    background: linear-gradient(-35deg, #e07e60, #b446d6, #3898bb, #2ec09e);
+    background-size: 400% 400%;
+    animation: backgroundColorAnimation 3s linear infinite;
+}
+
+/* Generell standard for alle tekstboblene */
+.textBubbles{
+    position: absolute;
+    top: 450px;
+    left: 700px;
+    background-color:white;
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 6px);
+    font-family: fantasy;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Tryllemann nederst */
+#tryllemannEn{
+    width: 120px;
+    height: 140px;
+    position: absolute;
+    top: 550px;
+    left: 900px;
+    opacity: 2;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+
+#firstText{
+    left: 750px;
+}
+
+/* lilla ball */
+#whole-purple-ball{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 350px;
+    left: 1050px;
+}
+
+.inside-purple-ball{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(163, 25, 163);
+    top: 20px;
+    opacity:0.9;
+}
+
+
+
+/* ANNEN HVER TREDJE BORDER-RADIUS/FARGE AV DIVENE INNI BALLEN SKAL VÆRE FORSKJELLLIGE */
+.inside-purple-ball:nth-child(3n + 1){
+    background-image: linear-gradient(#a770ef,#cf8bf3,#fdb99b);
+    border-radius: 35% 40%;
+    animation: insideBallLight 2s infinite;
+}
+
+.inside-purple-ball:nth-child(3n + 2){
+    background-image: linear-gradient(#6c4e8b,#4e0e6e);
+    border-radius: 50% 40%;
+    animation: insideBallLight 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.inside-purple-ball:nth-child(3n + 3){
+    background-image: linear-gradient(#f4c4f3,#fc67fa);
+    border-radius: 45% 50%;
+    animation: insideBallLight 2s infinite;
+    animation-delay: 1s;
+}
+
+
+.inside-purple-ball:nth-child(1){
+    transform: rotate(10deg);
+    left: 50px;
+    top: 5px;
+}
+
+.inside-purple-ball:nth-child(2){
+    transform: rotate(20deg);
+    left:30px;
+    top: 90px;
+}
+
+.inside-purple-ball:nth-child(3){
+    transform: rotate(30deg);
+    left:100px;
+    top: 50px;
+}
+
+.inside-purple-ball:nth-child(4){
+    transform: rotate(40deg);
+    left:80px;
+    top: 50px;
+}
+
+.inside-purple-ball:nth-child(5){
+    transform: rotate(50deg);
+    left:0px;
+    top: 50px;
+}
+
+.inside-purple-ball:nth-child(6){
+    transform: rotate(60deg);
+    left:20px;
+    top: 60px;
+}
+
+.inside-purple-ball:nth-child(7){
+    transform: rotate(70deg);
+    left:20px;
+    top: 20px;
+}
+
+.inside-purple-ball:nth-child(8){
+    transform: rotate(80deg);
+    left:40px;
+    top: 50px;
+}
+
+.inside-purple-ball:nth-child(9){
+    transform: rotate(90deg);
+    left:30px;
+    top: 20px;
+}
+
+.inside-purple-ball:nth-child(10){
+    transform: rotate(100deg);
+    left:80px;
+    top: 70px;
+}
+
+.inside-purple-ball:nth-child(11){
+    transform: rotate(110deg);
+    left:85px;
+    top: 20px;
+}
+
+.inside-purple-ball:nth-child(12){
+    transform: rotate(120deg);
+    left:70px;
+    top: 90px;
+}
+
+.inside-purple-ball:nth-child(13){
+    transform: rotate(130deg);
+    left:70px;
+    top: 90px;
+}
+
+
+
+
+
+/* Animasjon av lilla ball */
+#tryllemannEn:hover ~ #whole-purple-ball{
+    animation: purpleOrbMoves 5s infinite; 
+    animation-delay: 1s;
+}
+
+/* animasjon som switcher mellom tekst 1 og tekst 2 */
+#tryllemannEn:hover ~ #secondText{
+    opacity: 1;
+}
+
+/* --:-- */
+#tryllemannEn:hover ~ #firstText{
+    opacity: 0;
+}
+
+/* Animasjon av en magi effekt ved tryllestaven hans */
+#tryllemannEn:hover ~ #star1{
+    animation: magieffekt 0.75s infinite;
+    animation-delay: 1s;
+}
+
+#tryllemannEn:hover ~ #star2{
+    animation: magieffekt 0.75s infinite;
+    animation-delay: 1.3s;
+}
+
+#tryllemannEn:hover ~ #star3{
+    animation: magieffekt 0.75s infinite;
+    animation-delay: 1.5s;
+}
+
+#tryllemannEn:hover ~ #star4{
+    animation: magieffekt 0.75s infinite;
+    animation-delay: 1.6s;
+}
+
+ #tryllemannEn:hover ~ #whole-magic-wand{
+    animation: shakewand 1s infinite;
+ }
+
+#eye1{
+    animation: rotateEyes 4s infinite;
+}
+
+#eye2{
+    animation: rotateEyes 4s linear infinite;
+}
+
+/* Setter at tekst nr 2 skal være usynlig til å starte med */
+#secondText{
+    opacity: 0;
+}
+
+
+#purpleText{
+    color:purple;
+}
+/* En tryllestav som tryllemannen har på seg */
+#whole-magic-wand{
+    width: 10px;
+    height: 75px;
+    position: absolute;
+    top: 530px;
+    left: 1008px;
+    z-index: 1;
+    background: black;
+    transform: rotate(20deg);
+}
+
+#white-part-wand{
+    width: 10px;
+    height: 10px;
+    background: white;
+}
+
+/* Posisjonen til magieffekten til tryllestaven */
+#magiEffekt{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 485px;
+    left: 775px;
+}
+
+.part-star-1{
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid white;
+    position: absolute;
+}
+
+.part-star-2{
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid white;
+    transform: rotate(180deg);
+    top: -5px;
+}
+
+#star1{
+    position: absolute;
+    top: 500px;
+    left: 1005px;
+    opacity: 0;
+}
+
+#star2{
+    position: absolute;
+    top: 520px;
+    left: 1045px;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+#star3{
+    position: absolute;
+    top: 490px;
+    left: 1045px;
+    transform: scale(0.6);
+    opacity: 0;
+}
+
+#star4{
+    position: absolute;
+    top: 550px;
+    left: 1035px;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+
+
+#lever-box-trigger{
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 505px;
+    left: 580px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+#lever-box{
+    width: 10px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    top: 500px;
+    left: 588px;
+    z-index: 4;
+    transform: skewY(-50deg);
+}
+
+#lever-pin{
+    width: 4px;
+    height:20px;
+    background: white;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 4;
+    left: 595px;
+    top: 495px;
+    transform: rotate(30deg);
+}
+
+
+#press-me-box{
+    width: 110px;
+    height: 125px;
+    background: rgb(32, 31, 31);
+    position: absolute;
+    top: 515px;
+    left: 464px;
+    z-index: 2;
+    
+}
+
+#press-me-box2{
+    width: 43px;
+    height: 123px;
+    background: grey;
+    position: absolute;
+    top: 489px;;
+    left: 573px;
+    transform: skewY(-50deg);
+    z-index: 2;
+}
+
+#press-me-box3{
+    width: 109px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    top: 465px;
+    left: 485px;
+    transform: skewX(-40deg);
+    z-index: 2;
+}
+
+#press-me-btn{
+    width:80px;
+    height: 80px;
+    position: absolute;
+    background: red;
+    border-radius: 50%;
+    color:white;
+    text-align: center;
+    top: 450px;
+    left: 500px;
+    box-shadow: 0 0 5px 5px black;
+    transform: rotateX(60deg) skewX(-15deg);
+    z-index: 2;
+}
+
+#screen{
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    background: rgb(231, 215, 215);
+    border: 5px solid black;
+    border-radius: 10px;
+    top: 250px;
+    left: 400px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#rolando-screen{
+    position: absolute;
+    left: -190px;
+    top: -100px;
+}
+#press-me-trigger{
+    width: 110px;
+    height: 50px;
+    position: absolute;
+    z-index: 5;
+    top: 460px;
+    left: 480px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+#press-me-trigger:checked ~ #screen{
+    animation: magieffekt 0.5s forwards;
+    animation-delay: 1.75s;
+}
+
+#press-me-trigger:checked ~ #press-me-btn{
+    animation: btnAnimation 0.5s;
+}
+
+#press-me-trigger:checked ~ #whole-rolando{
+    animation: pressBtnRolandoMove 4s;
+}
+
+#press-me-trigger:checked ~ #rolando-text2{
+    animation: opacityEqual1 4s linear;
+    animation-delay: 3.75s;
+}
+
+
+#eye1:hover{
+    animation: rotateEyes 2s infinite;
+}
+
+/* Øyner til puppet */
+#eye1{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 260px;
+}
+
+#inner-eye1{
+    width:7px;
+    height: 7px;
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    left: 2px;
+    top: 4px;
+}
+
+#inner-inner-eye1{
+    width:2px;
+    height: 2px;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    left: 1px;
+    top: 2px;
+}
+
+
+#eye2{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 260px;
+    left: -20px;
+}
+
+#inner-eye2{
+    width:7px;
+    height: 7px;
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    left: 2px;
+    top: 4px;
+}
+
+#inner-inner-eye2{
+    width:2px;
+    height: 2px;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    left: 1px;
+    top: 2px;
+}
+
+
+#floor{
+    position: absolute;
+    width:1300px;
+    height: 35px;
+    background-color: rgb(41, 23, 5);
+    opacity: 1;
+    top: 685px;
+    overflow: visible;
+}
+
+/* bruker nth-child metoden får å hente inn alle elementene som har "bricks" som class name, for så å bla igjennom de. */
+.bricks:nth-child(even){
+    background-color: rgb(90, 36, 87);
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius:30%;
+    animation: bottomSpin 2s infinite linear;
+}
+.bricks:nth-child(odd){
+    background-color: rgb(0, 99, 30);
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50%;
+    animation: bottomSpin 2s linear;
+}
+
+.bricks:nth-child(7){
+    animation: bottomSpin 2s linear;
+}
+
+.bricks:nth-child(9){
+    animation: bottomSpin 2s linear;
+    animation-delay: 0.5s;
+}
+
+.bricks:nth-child(11){
+    animation: bottomSpin 2s linear;
+    animation-delay: 1s;
+}
+
+.bricks:nth-child(13){
+    animation: bottomSpin 2s linear;
+    animation-delay: 1.5s;
+}
+
+.bricks:nth-child(15){
+    animation: bottomSpin 2s linear;
+    animation-delay: 2s;
+}
+
+.bricks:nth-child(17){
+    animation: bottomSpin 2s linear;
+    animation-delay: 2.5s;
+}
+
+.bricks:nth-child(19){
+    animation: bottomSpin 2s linear;
+    animation-delay: 3s;
+}
+
+.bricks:nth-child(23){
+    animation: bottomSpin 2s linear;
+    animation-delay: 4s;
+}
+
+.bricks:nth-child(25){
+    animation: bottomSpin 2s linear;
+    animation-delay: 4.5s;
+}
+
+.bricks:nth-child(27){
+    animation: bottomSpin 2s linear;
+    animation-delay: 5s;
+}
+
+.bricks:nth-child(29){
+    animation: bottomSpin 2s linear;
+    animation-delay: 5.5s;
+}
+
+.bricks:nth-child(31){
+    animation: bottomSpin 2s linear;
+    animation-delay: 6s;
+}
+
+
+
+.bottom-text{
+    color: white;
+    position: absolute;
+    top: -5px;
+    padding-left: 12px;
+}
+
+.walls{
+    height: 685px;
+    width: 50px;
+    background-image: linear-gradient(#8a1c0e, #3a0909fd);
+    position: absolute;
+    z-index: 2;
+}
+
+#wall2{
+    right:0px;
+}
+
+
+.cogwheels-style{
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    background: red;
+    border-radius: 50%;
+    z-index: 4;
+    border: 2px solid black;
+
+    
+}
+
+.cog-parts:nth-child(1){
+    top: -15px;
+    right: 65px;
+}
+
+.cog-parts:nth-child(2){
+    top: -10px;
+    right: 100px;
+    transform: rotate(-20deg);
+}
+.cog-parts:nth-child(3){
+    top: 10px;
+    right: 130px;
+    transform: rotate(-45deg);
+}
+
+.cog-parts:nth-child(4){
+    top: 40px;
+    right: 145px;
+    transform: rotate(-70deg);
+}
+
+.cog-parts:nth-child(5){
+    top: 73px;
+    right: 150px;
+    transform: rotate(-90deg);
+}
+
+.cog-parts:nth-child(6){
+    top: 105px;
+    right: 140px;
+    transform: rotate(-115deg);
+}
+.cog-parts:nth-child(7){
+    top: 135px;
+    right: 120px;
+    transform: rotate(-140deg);
+}
+
+.cog-parts:nth-child(8){
+    top: 150px;
+    right: 90px;
+    transform: rotate(-160deg);
+}
+
+.cog-parts:nth-child(9){
+    top: 155px;
+    right: 55px;
+    transform: rotate(-185deg);
+}
+
+.cog-parts:nth-child(10){
+    top: 145px;
+    right: 20px;
+    transform: rotate(-210deg);
+}
+
+.cog-parts:nth-child(11){
+    top: 125px;
+    right: -5px;
+    transform: rotate(-235deg);
+}
+
+.cog-parts:nth-child(12){
+    top: 95px;
+    right: -20px;
+    transform: rotate(-255deg);
+}
+.cog-parts:nth-child(13){
+    top: 62px;
+    right: -23px;
+    transform: rotate(-275deg);
+}
+.cog-parts:nth-child(14){
+    top: 30px;
+    right: -15px;
+    transform: rotate(-295deg);
+}
+.cog-parts:nth-child(15){
+    top: 5px;
+    right: 5px;
+    transform: rotate(-315deg);
+}
+.cog-parts:nth-child(16){
+    top: -10px;
+    right: 32px;
+    transform: rotate(-340deg);
+}
+
+#cogwheel1{
+    top: 70px;
+    right: 50px;
+    animation: spinCogwheel 4s infinite linear;
+}
+
+#cogwheel2{
+    top:-45px;
+    left: 5px;
+    transform: scale(0.4);
+    position: absolute;
+    animation: spinCogwheel2 4s infinite linear;
+}
+
+
+
+.cog-parts{
+    width: 30px;
+    height: 20px;
+    background: red;
+    position: absolute;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border:1px solid black;
+}
+
+.middle-part{
+    width: 30px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    top: 63px;
+    right: 65px;
+    border-radius: 35%;
+    z-index: 5;
+}
+
+#line-cogwheel{
+    width: 1100px;
+    height: 30px;
+    position: absolute;
+    z-index: 4;
+    top: 75px;
+    left: 65px;
+    opacity:0.5;
+    transform: rotate(6deg);
+    /* Tar litt tid å skjønne, men må definere hver side av div'en, derfor det er 4 koordinater der som man må gi x,x,y,y: samme gjelder for de 4 neste linjene, så lage en animasjon for å få det til å bevege seg */
+    background: linear-gradient(90deg, white 70%, transparent 0%), linear-gradient(90deg, white 70%, transparent 0%), linear-gradient(0deg, white 70%, transparent 0%), linear-gradient(0deg, white 70%, transparent 0%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 30px 4px, 30px 4px, 4px 30px, 4px 30px;
+    background-position: 0px 0px, 1100px 30px, 0px 30px, 1100px 0px;
+    padding: 2.5px;
+    border-radius: 8px;
+    animation: border-spin 10s infinite linear;
+}
+#rolando-tekst{
+    position: absolute;
+    top: -50px;
+    left: 130px;
+    opacity: 0;
+    animation: opacityEqual1 5s;
+    animation-delay: 2.1s;
+}
+
+#carpet1{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    background: linear-gradient(15deg, #8a1c0e, #3a0909fd); 
+    border-radius: 50%;
+    border: 2px solid black;
+    transform: rotate(-40deg);
+    top: -56px;
+    left: -140px;
+    filter:contrast(300%);
+    z-index: 3;
+}
+
+#carpet2{
+    width: 650px;
+    height: 300px;
+    position: absolute;
+    background: linear-gradient(0deg, #8a1c0e, #3a0909fd); 
+    left: 315px;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: -130px;
+    filter:contrast(300%);
+    z-index: 3;
+    
+}
+
+#carpet3{
+    width: 500px;
+    height: 330px;
+    position: absolute;
+    background: linear-gradient(-15deg, #8a1c0e, #3a0909fd);
+    left: 925px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transform: rotate(40deg);
+    top: -35px;
+    filter:contrast(300%); /* for å endre fargen på et bilde */
+    z-index: 3;
+}
+
+.thread-puppet{
+    width: 5px;
+    height: 250px;
+    position: absolute;
+    background: black;
+    z-index: 0;
+}
+
+#thread1{
+    top: 75px;
+    left: 200px;
+    animation: threadsAnimation 2s infinite linear;
+}
+
+#thread2{
+    top: 75px;
+    left: 800px;
+    animation: threadsAnimation 2s infinite linear;
+    animation-delay: 1s;
+
+}
+
+
+
+.puppets{
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+}
+
+#puppet-head2{
+    position: absolute;
+    top: 247px;
+    left: -25px;
+    border-radius: 50%;
+}
+
+#puppet-head{
+    position: absolute;
+    top: 247px;
+    left: -25px;
+    border-radius: 50%;
+}
+
+.pup-eyes{
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    background: black;
+}
+
+#puppet-eyes{
+    top: 265px;
+    left: -10px;
+    transform: rotate(-45deg);
+}
+
+#pup-eyes-2{
+    top: 265px;
+    left: -10px;
+    transform: rotate(-45deg);
+}
+
+#puppet-eyes-2{
+    top: 265px;
+    left: 10px;
+    transform: rotate(-45deg);
+}
+
+#pup-eyes-2-2{
+    top: 265px;
+    left: 10px;
+    transform: rotate(-45deg);
+}
+
+#pup-eyes-1{
+    top: 265px;
+    left: 10px;
+    transform: rotate(45deg);
+}
+
+#puppet-eyes2{
+    top: 265px;
+    left: 10px;
+    transform: rotate(45deg);
+}
+
+#pup-eyes-1-2{
+    top: 265px;
+    left: -10px;
+    transform: rotate(45deg);
+}
+
+#puppet-eyes2-2{
+    top: 265px;
+    left: -10px;
+    transform: rotate(45deg);
+}
+
+#puppet-body{
+    position: absolute;
+    top: 300px;
+}
+
+.pup-parts{
+    height: 50px;
+    width: 5px;
+    background: black;
+}
+
+#puppet-body2{
+    position: absolute;
+    top: 300px;
+}
+
+#puppet-legs2{
+    top: 345px;
+    left: -10px;
+    position: absolute;
+    transform: rotate(20deg);
+}
+
+#puppet-legs{
+    top: 345px;
+    left: -10px;
+    position: absolute;
+    transform: rotate(20deg);
+}
+
+#puppet-legs2-2{
+    top: 345px;
+    left: 10px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+#puppet-legs-2{
+    top: 345px;
+    left: 10px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+#puppet-arms2{
+    position: absolute;
+    top: 300px;
+    left: -25px;
+    transform: rotate(100deg);
+}
+
+#puppet-arms{
+    position: absolute;
+    top: 300px;
+    left: -25px;
+    transform: rotate(100deg);
+}
+
+#puppet-arms2-2{
+    position: absolute;
+    top: 300px;
+    left: 25px;
+    transform: rotate(80deg);
+}
+
+#puppet-arms-2{
+    position: absolute;
+    top: 300px;
+    left: 25px;
+    transform: rotate(80deg);
+}
+
+#PUPPETS{
+    position: absolute;
+    animation: slidePuppets 3s  infinite linear;
+}
+
+
+
+
+#make-background-like-3d-floor{
+    width: 1200px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    top:587px;
+    left: 83px;
+    transform: skewX(-35deg);
+    opacity: 0.7;
+}
+
+#make-background-like-3d-wall{
+    width: 1px;
+    height: 588px;
+    position: absolute;
+    left: 117px;
+    background-color:black;
+
+}
+
+
+#whole-rolando{
+    position: absolute;
+    top: 510px;
+    left: 75px;
+    z-index: 4;
+    width: 130px;
+    height: 50px;    
+}
+
+#rolando{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    animation: rolandoSpawn 2s linear;
+    animation-fill-mode: forwards;  
+    opacity: 0;
+}
+
+#arm1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    top: 50px;
+    left: 108px;
+    animation: armsSpawn1 2s linear forwards;  
+    opacity: 0;
+}
+
+#arm2{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    left: 45px;
+    top: 50px;
+    animation: armsSpawn2 2s linear forwards;
+    opacity: 0;
+}
+
+#hole-on-wall-animation{
+    width:40px;
+    height: 70px;
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    background-color: black;
+    transform: skewY(-20deg);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.fancy-glancy:nth-child(n){
+    width:2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.fancy-glancy:nth-child(3n + 1){
+    animation: opacityEqual1 1s infinite;
+}
+
+.fancy-glancy:nth-child(3n + 2){
+    animation: opacityEqual1 1s infinite;
+    animation-delay: 0.3s;
+}
+
+.fancy-glancy:nth-child(3n + 3){
+    animation: opacityEqual1 1s infinite;
+    animation-delay: 0.6s;
+}
+
+.fancy-glancy:nth-child(1){
+    top: 25px;
+}
+
+.fancy-glancy:nth-child(2){
+    top: 25px;
+    left: 30px;
+}
+
+.fancy-glancy:nth-child(3){
+    top: 15px;
+    left: 20px;
+}
+
+.fancy-glancy:nth-child(4){
+    top: 40px;
+    left: 25px;
+}
+
+.fancy-glancy:nth-child(5){
+    top: 50px;
+    left: 10px;
+}
+
+.fancy-glancy:nth-child(6){
+    top: 55px;
+    left: 28px;
+}
+
+.fancy-glancy:nth-child(7){
+    top: 20px;
+    left: 10px;
+}
+
+
+
+.bottom-text{
+    animation: blackAndWhite 3s infinite linear;
+}
+
+
+
+#rolando-text2{
+    left: 205px;
+    top: 480px;
+    position: absolute;
+    opacity: 0;
+}
+
+#lever-box-trigger:checked ~ #lever-pin{
+    animation: leverFlip 1s linear forwards;
+}
+
+#open-box-trigger{
+    width: 110px;
+    height: 130px;
+    position: absolute;
+    top: 507px;
+    left: 460px;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#lever-box-trigger:checked ~ #press-me-box{
+    animation: purple 2s linear forwards;
+}
+
+#lever-box-trigger:checked ~ #press-me-box2{
+    animation: green 2s linear forwards;
+}
+
+#lever-box-trigger:checked ~ #press-me-box3{
+    animation: red 2s linear forwards;
+}
+
+#open-box-trigger:checked ~ #press-me-box{
+    animation: boxDoorMove 2s linear forwards;
+}
+
+
+#press-me-box4{
+    width: 43px;
+    height: 123px;
+    background: grey;
+    position: absolute;
+    top: 489px;;
+    left: 465px;
+    transform: skewY(-50deg);
+    z-index: 1;
+}
+
+.birds-style{
+    width: 30px;
+    height: 20px;
+    background: rgb(241, 76, 76);
+    border: 1px solid black;
+    position: absolute;
+    z-index: 5;
+    top: 550px;
+    left: 550px;
+    border-radius: 45%;
+    transform: rotate(20deg);
+}
+
+.wing1{
+    width: 15px;
+    height: 5px;
+    background:rgb(204, 174, 174);
+    border-radius: 45%;
+    position: absolute;
+    transform: rotate(90deg);
+    left: 10px;
+    top: -5px;
+    border: 1px solid black;
+    animation: birdFly 0.5s linear infinite;
+}
+.wing2{
+    width: 15px;
+    height: 5px;
+    background:rgb(255, 255, 255);
+    border-radius: 45%;
+    position: absolute;
+    transform: rotate(110deg);
+    left: 15px;
+    top: -5px;
+    border: 1px solid black;
+    animation: birdFly2 0.5s linear infinite;
+}
+.eye-bird{
+    width: 4px;
+    height: 4px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+
+#bird1{
+    z-index: 2;
+}
+#bird2{
+    left: 500px;
+    z-index: 2;
+}
+
+#bird3{
+    left: 515px;
+    top: 580px;
+    z-index: 2;
+}
+
+#bird4{
+    left: 475px;
+    top: 580px;
+    z-index: 2;
+}
+
+/* TRIGGERS */
+
+#open-box-trigger:checked ~ #bird1{
+    animation: bird1 8s linear forwards;
+    animation-delay: 2s;
+}
+#open-box-trigger:checked ~ #bird2{
+    animation: bird2 7s linear forwards;
+    animation-delay: 2s;
+}
+#open-box-trigger:checked ~ #bird3{
+    animation: bird3 9s linear forwards;
+    animation-delay: 2s;
+}
+#open-box-trigger:checked ~ #bird4{
+    animation: bird4 10s linear forwards;
+    animation-delay: 2s;
+}
+
+/* KEYFRAMES */
+
+@keyframes bird1{
+    10%{
+        left: 400px;
+        top: 400px;
+    }
+    20%{
+        left: 320px;
+        top: 300px;
+    }
+    30%{
+        left: 420px;
+        top: 350px;
+    }
+    40%{
+        left: 520px;
+        top: 250px;
+    }
+    50%{
+        left: 600px;
+        top: 400px;
+        transform: rotate(360deg);
+    }
+    60%{
+        left: 800px;
+        top: 300px;
+    }
+    70%{
+        left: 400px;
+        top: 200px;
+    }
+    80%{
+        left: 0px;
+        top: 250px;
+    }
+    90%{
+        left: 0px;
+        top: 0px;
+    }
+    100%{
+        left: -100px;
+        top: -100px;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bird2{
+    10%{
+        left: 450px;
+        top: 450px;
+    }
+    20%{
+        left: 370px;
+        top: 380px;
+    }
+    30%{
+        left: 440px;
+        top: 390px;
+    }
+    40%{
+        left: 590px;
+        top: 220px;
+    }
+    50%{
+        left: 640px;
+        top: 490px;
+        transform: rotate(-360deg);
+    }
+    60%{
+        left: 830px;
+        top: 310px;
+    }
+    70%{
+        left: 450px;
+        top: 220px;
+    }
+    80%{
+        left: 30px;
+        top: 290px;
+    }
+    90%{
+        left: 0px;
+        top: 0px;
+    }
+    100%{
+        left: -100px;
+        top: -100px;
+        transform: rotate(360deg);
+    }
+
+}
+@keyframes bird3{
+    10%{
+        left: 490px;
+        top: 490px;
+    }
+    20%{
+        left: 390px;
+        top: 390px;
+    }
+    30%{
+        left: 490px;
+        top: 390px;
+    }
+    40%{
+        left: 590px;
+        top: 290px;
+    }
+    50%{
+        left: 690px;
+        top: 490px;
+        transform: rotate(-360deg);
+    }
+    60%{
+        left: 890px;
+        top: 390px;
+    }
+    70%{
+        left: 490px;
+        top: 290px;
+    }
+    80%{
+        left: 90px;
+        top: 290px;
+    }
+    90%{
+        left: 0px;
+        top: 0px;
+    }
+    100%{
+        left: -100px;
+        top: -100px;
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes bird4{
+    10%{
+        left: 390px;
+        top: 390px;
+    }
+    20%{
+        left: 290px;
+        top: 290px;
+    }
+    30%{
+        left: 390px;
+        top: 390px;
+    }
+    40%{
+        left: 390px;
+        top: 490px;
+    }
+    50%{
+        left: 540px;
+        top: 350px;
+        transform: rotate(360deg);
+    }
+    60%{
+        left: 790px;
+        top: 490px;
+    }
+    70%{
+        left: 390px;
+        top: 390px;
+    }
+    80%{
+        left: 40px;
+        top: 200px;
+    }
+    90%{
+        left: 0px;
+        top: 0px;
+    }
+    100%{
+        left: -100px;
+        top: -100px;
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes backgroundColorAnimation{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes insideBallLight {
+    50%{
+        box-shadow: 0px 0px 3px 5px snow;
+        filter: saturate(1);
+    }
+    100%{
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+}
+
+@keyframes shakewand{
+    0%{
+        transform: rotate(20deg);
+        top: 530px;
+        left: 1008px;
+    }
+    33%{
+        transform: rotate(30deg);
+        top: 535px;
+        left: 1013px;
+    }
+    66%{
+        transform: rotate(10deg);
+        top: 528px;
+        left: 1000px;
+    }
+    100%{
+        transform: rotate(20deg);
+        top: 530px;
+        left: 1008px;
+    }
+}
+
+/* Gjør en animasjon for lilla ball */
+@keyframes purpleOrbMoves{
+    0%{
+        transform:rotate(0deg);
+    }
+    25%{
+        transform:rotate(360deg);
+    }
+    50%{
+        transform:rotate(0deg)
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* Animasjon som får magieffekten til å gå av og på(aka blinke) */
+@keyframes magieffekt {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes purple{
+    100%{
+        background: purple;
+    }
+}
+
+@keyframes red{
+    100%{
+        background: red;
+    }
+}
+
+@keyframes green{
+    100%{
+        background: green;
+    }
+}
+
+@keyframes leverFlip{
+    100%{
+        transform: rotate(120deg);
+        top: 510px;
+        left: 600px;
+    }
+}
+
+@keyframes btnAnimation{
+    100%{
+        transform: rotateX(60deg) skewX(-15deg) scale(0.95);
+        top: 452px;
+    }
+}
+
+@keyframes rotateEyes{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bottomSpin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCogwheel{
+    /* Kunne bare skrevet "to" isteden for 100%, men har ikke noe å si her. */
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCogwheel2{
+    100%{
+        transform: scale(0.4) rotate(360deg);
+    }
+}
+
+
+@keyframes border-spin {
+    /* opp, ned, venstre, høyre -side  */
+    0% {
+    background-position: 0px 0px, 1100px 30px, 0px 30px, 1100px 0px;
+    }
+    100% {
+    background-position: 1100px 0px, 0px 30px, 0px 0px, 1100px 150px;
+    }
+}
+
+@keyframes threadsAnimation {
+    50%{
+        top: 0px;
+    }
+}
+
+@keyframes slidePuppets{
+    0%{
+        transform: skewX(10deg);
+    }
+    50%{
+        transform: skewX(-10deg);
+    }
+    100%{
+        transform: skewX(10deg);
+    }
+}
+
+
+@keyframes rolandoSpawn{
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes armsSpawn1 {
+    90%{
+        opacity: 0;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes armsSpawn2 {
+    90%{
+        opacity: 0;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        
+    }
+}
+
+@keyframes pressBtnRolandoMove{
+    10%{
+        top: 460px;
+    }
+    40%{
+        top: 460px;
+        left: 350px;
+    }
+
+    60%{
+        left:340px;
+        top: 510px;
+    }
+    100%{
+        left: 75px;
+        top: 510px;
+    }
+}
+
+@keyframes opacityEqual1{
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+@keyframes blackAndWhite{
+    33%{
+        color:black;
+    }
+    66%{
+        color:white;
+    }
+}
+
+@keyframes boxDoorMove {
+    0% {
+        transform: rotateX(0);
+        transform-origin: top;
+    }
+    100% {
+        transform: rotateX(-90deg);
+        transform-origin: top;
+    }
+}
+
+@keyframes birdFly2{
+    33%{
+        transform: rotate(105deg);
+    }
+    66%{
+        transform: rotate(115deg);
+    }
+    100%{
+        transform: rotate(110deg);
+    }
+}
+
+@keyframes birdFly{
+    33%{
+        transform: rotate(95deg);
+    }
+    66%{
+        transform: rotate(85deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}

@@ -1,0 +1,1386 @@
+/* KODET AV EN ANNEN ELEV */
+
+body {
+    background-color: #163030;
+}
+
+/* Main Container */
+#main-container {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#56ccf2, #2f80ed);
+}
+
+.text-bubbles {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 6px);
+    font-family: fantasy;
+    width: 240px;
+    text-align: center;
+    bottom: 250px;
+    z-index: 4;
+    left: 290px;
+}
+
+#seagull {
+    position: absolute;
+    width: 150px;
+    top: 234px;
+    left: 285px;
+    color: white;
+    opacity: 0;
+    z-index: 2;
+}
+
+#hide-audio {
+    position: absolute;
+    height: 55px;
+    width: 110px;
+    border-top-right-radius: 29%;
+    border-bottom-right-radius: 29%;
+    background: black;
+    left: 325px;
+    top: 234px;
+    z-index: 3;
+    opacity: 0;
+}
+
+#mountain-pulse {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 296px;
+    top: 245px;
+    background: #BDB76B;
+    border-radius: 50%;
+    animation: pulse-mountain-buzz 1s linear infinite;
+    z-index: 1;
+}
+
+/* Container Color */
+#container-color {
+    width: 1280px;
+    height: 720px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    background: linear-gradient(#29323c, #485563);
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Sol elementer */
+#sun {
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 650px;
+    position: absolute;
+    background-image: radial-gradient(yellow, orange);
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+#night-mode {
+    position: absolute;
+    left: 650px;
+    top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Sky elementer */
+/* Sky container 1 */
+#cloud1 {
+    position: absolute;
+    left: -250px;
+    top: 50px;
+    animation: cloud-move 15s linear infinite;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+/* Sky container 3 */
+#cloud2 {
+    position: absolute;
+    left: -250px;
+    top: 100px;
+    animation: cloud-move 9s linear infinite;
+    animation-delay: 3s;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+/* Sky container 3 */
+#cloud3 {
+    position: absolute;
+    left: -250px;
+    top: 0px;
+    animation: cloud-move 15s linear infinite;
+    animation-delay: 4s;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+/* Elementene som utgjør skyen */
+/* Stilsetting av det venstre sky elementet. */
+.cloud-left {
+    width: 90px;
+    height: 90px;
+    top: 80px;
+    left: 0px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(#fdfbfb, #ebedee);
+}
+
+/* Stilsetting av det midterste sky elementet. */
+.cloud-center {
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(#fdfbfb, #ebedee);
+    z-index: 1;
+}
+
+/* Stilsetting av det høyre sky elementet. */
+.cloud-right {
+    width: 130px;
+    height: 130px;
+    top: 40px;
+    left: 120px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(#fdfbfb, #ebedee);
+}
+
+/* Plassering av fugl 1 */
+#bird1 {
+    position: absolute;
+}
+
+/* Plassering av fugl 2 */
+#bird2 {
+    position: absolute;
+    left: -400px;
+    top: 200px;
+}
+
+/* Plassering av fugl 3 */
+#bird3 {
+    position: absolute;
+    left: -620px;
+    top: 100px;
+}
+
+/* Plassering av fugl 4 */
+#bird4 {
+    position: absolute;
+    left: -820px;
+    top: 150px;
+}
+
+/* Fuglens høyre øye */
+.eyes-right {
+    position: absolute;
+    top: -27px;
+    left: 0px;
+}
+
+/* Fuglens venstre øye */
+.eyes-left {
+    position: absolute;
+    top: -27px;
+    right: 0px;
+}
+
+/* Fuglens venstre vinge */
+.bird-wing-one {
+    width: 25px;
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    transform: skew(0deg, 9deg);
+
+}
+
+/* Fuglens høyre vinge */
+.bird-wing-two {
+    width: 25px;
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    transform: skew(0deg, -9deg);
+}
+
+/* plassering av den første fuglens venstre vinge */
+#wing1 {
+    top: 30px;
+    left: 900px;
+    animation: moveWing1 1s infinite linear;
+}
+
+/* plassering av den første fuglens høyre vinge */
+#wing2 {
+    top: 30px;
+    left: 925px;
+    animation: moveWing2 1s infinite linear;
+}
+
+/* plassering av den andre fuglens venstre vinge */
+#wing3 {
+    top: 30px;
+    left: 900px;
+    animation: moveWing1 1s infinite linear;
+}
+
+/* plassering av den andre fuglens høyre vinge */
+#wing4 {
+    top: 30px;
+    left: 925px;
+    animation: moveWing2 1s infinite linear;
+}
+
+/* plassering av den tredje fuglens venstre vinge */
+#wing5 {
+    top: 30px;
+    left: 900px;
+    animation: moveWing1 1s infinite linear;
+}
+
+/* plassering av den tredje fuglens høyre vinge */
+#wing6 {
+    top: 30px;
+    left: 925px;
+    animation: moveWing2 1s infinite linear;
+}
+
+/* plassering av den fjerde fuglens venstre vinge */
+#wing7 {
+    top: 30px;
+    left: 900px;
+    animation: moveWing1 1s infinite linear;
+}
+
+/* plassering av den fjerde fuglens høyre vinge */
+#wing8 {
+    top: 30px;
+    left: 925px;
+    animation: moveWing2 1s infinite linear;
+}
+
+/* Styling av input checkbox for den første fuglen */
+#check-bird1 {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 20px;
+    left: 900px;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Styling av input checkbox for den andre fuglen */
+#check-bird2 {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 220px;
+    left: 500px;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Styling av input checkbox for den tredje fuglen */
+#check-bird3 {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 120px;
+    left: 280px;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Styling av input checkbox for den fjerde fuglen */
+#check-bird4 {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    top: 170px;
+    left: 80px;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Fjell elementene fra venstre mot høyre */
+/* Stilsetting av fjellelement 1 */
+#mountain1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 370px;
+    left: -130px;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 350px solid #A9A9A9;
+    z-index: 0;
+}
+
+/* Stilsetting av fjellelement 2 */
+#mountain2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 270px;
+    left: 50px;
+    border-left: 260px solid transparent;
+    border-right: 260px solid transparent;
+    border-bottom: 450px solid #D3D3D3;
+}
+
+/* Stilsetting av fjellelement 3 */
+#mountain3 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 370px;
+    left: 350px;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 350px solid #D0D0D0;
+}
+
+/* Stilsetting av fjellelement 4 */
+#mountain4 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 300px;
+    left: 550px;
+    border-left: 270px solid transparent;
+    border-right: 270px solid transparent;
+    border-bottom: 420px solid #C0C0C0;
+}
+
+/* Stilsetting av fjellelement 5 */
+#mountain5 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 370px;
+    left: 760px;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 350px solid #D0D0D0;
+}
+
+/* Stilsetting av fjellelement 6 */
+#mountain6 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 220px;
+    left: 900px;
+    border-left: 290px solid transparent;
+    border-right: 290px solid transparent;
+    border-bottom: 500px solid #696969;
+}
+
+/* Bølge elementer. */
+/* Stilsetting av bølgene i den bakerste bølge-containeren.*/
+#waves1 {
+    width: 1380px;
+    height: 50px;
+    position: absolute;
+    left: -30px;
+    bottom: 20px;
+    z-index: 2;
+    animation: wave-movement 1s infinite alternate;
+}
+
+/* Stilsetting av de bakerste bølgene. Denne er ikke i ocean-containeren */
+.wave1 {
+    border-left: 70px solid #006994;
+    border-right: 70px solid #006994;
+    border-bottom: 130px solid #006994;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    display: inline-block;
+}
+
+/* Plasseringen av containeren som inneholder #waves2 og #waves3. */
+#ocean {
+    position: absolute;
+    top: 720px;
+    z-index: 5;
+}
+
+/* Bølge-container 2. Dette er den midterste bølgene. */
+#waves2 {
+    width: 1380px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 3;
+    left: 70px;
+    animation: wave-movement 1s infinite alternate;
+    animation-delay: 1s;
+}
+
+/* Stilsetting av bølgene i bølge-container 2 */
+.wave2 {
+    border-left: 70px solid #0097f1;
+    border-right: 70px solid #0097f1;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom: 130px solid #0097f1;
+    display: inline-block;
+}
+
+/* Bølge-container 3. Dette er den fremste bølgene. */
+#waves3 {
+    width: 1380px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    left: 20px;
+    animation: wave-movement 1s infinite alternate;
+    animation-delay: 0.5s;
+}
+
+/* Stilsetting av bølgene i bølge-container 3 */
+.wave3 {
+    border-left: 70px solid #0077be;
+    border-right: 70px solid #0077be;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom: 130px solid #0077be;
+    display: inline-block;
+}
+
+/* Båt elementer */
+/* Stilsettingen av selve containeren som inneholder båten. 
+   Containerens hensikt er at den skal holde tekstboblen i ro, 
+   når båten tar backflip. */
+#boat-container {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 60px;
+    bottom: -30px;
+    z-index: 4;
+}
+
+/* Stilsettingen av en container som inneholder både skroget til båten og bildet av professor.*/
+#boat-rotate {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    animation: boat-rocking 1.4s ease-in-out infinite alternate;
+}
+
+/* Stilsettingen av skroget til båten. */
+#haul {
+    width: 350px;
+    height: 200px;
+    border-radius: 40%;
+    box-shadow: 0px 100px 0px 0px #B65450;
+    z-index: 0;
+}
+
+/* Stilsetting av professor-bildet. */
+#professor {
+    position: absolute;
+    width: 600px;
+    top: 50px;
+    left: -150px;
+    z-index: -1;
+}
+
+/* Stilsettingen av div som trigger backflip animasjonen til båten. */
+#boat-hover-effect {
+    width: 350px;
+    height: 70px;
+    background: transparent;
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    z-index: 5;
+}
+
+/* Stilsettingen av fisken som flyr over himmelen. */
+#flying-fish {
+    position: absolute;
+    height: 80px;
+    width: 150px;
+    left: -170px;
+    top: 150px;
+    z-index: 3;
+    animation: flying-fish-fly 20s linear infinite;
+}
+
+/* Stilsettingen av den flyvende fiskens kropp. */
+#flying-fish-body {
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    background: #708090;
+    border-radius: 100px / 50px;
+    animation: flying-fish-up-down 0.5s linear infinite alternate;
+}
+
+/* Stilsettingen av den flyvende fiskens øye. */
+#flying-fish-eye {
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    color: white;
+    left: 70px;
+    z-index: 1;
+}
+
+/* Stilsettingen av den flyvende fiskens munn. */
+#flying-fish-mouth {
+    position: absolute;
+    left: 81px;
+    bottom: 5px;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Stilsettingen av den flyvende fiskens halefinne. */
+#flying-fish-tail {
+    width: 0;
+    height: 0;
+    left: -10px;
+    bottom: -8px;
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #2F4F4F;
+    border-bottom: 30px solid transparent;
+    z-index: -1;
+}
+
+/* Stilsettingen av den flyvende fiskens ryggfinne. */
+#flying-back-fin {
+    width: 0;
+    height: 0;
+    left: 25px;
+    bottom: 35px;
+    transform: rotate(-5deg);
+    position: absolute;
+    border-bottom: 20px solid #2F4F4F;
+    border-right: 20px solid transparent;
+    z-index: -1;
+}
+
+/* Stilsettingen av den flyvende fiskens sidefinne. */
+#flying-fish-side-fin {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 20px;
+    left: 40px;
+    border-top: 20px solid #2F4F4F;
+    border-right: 20px solid transparent;
+    animation: side-fin-move 0.5s linear infinite alternate;
+}
+
+/* Stilsettingen av tauet som er festet til den flyvende fisken */
+#rope {
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background: black;
+    left: -35px;
+    top: 17px;
+    z-index: -2;
+}
+
+/* Stilsettingen av plakaten som er festet til den flyvende fisken */
+#banner {
+    position: absolute;
+    height: 45px;
+    width: 150px;
+    background: white;
+    left: -180px;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    overflow: hidden;
+}
+
+/* Stilsettingen av plakat-teksten */
+#banner-text {
+    font-size: 30px;
+    font-family: fantasy;
+    position: absolute;
+    top: -25px;
+    left: 30px
+}
+
+/* Stilsettingen av den første fisken som tar backflip. */
+#fish-tricks-container1 {
+    position: absolute;
+    height: 80px;
+    width: 150px;
+    left: 500px;
+    bottom: 0px;
+    z-index: 3;
+    animation: fish-rocking 1s linear infinite alternate;
+}
+
+/* Stilsettingen av den andre fisken som tar backflip. */
+#fish-tricks-container2 {
+    position: absolute;
+    height: 80px;
+    width: 150px;
+    left: 600px;
+    bottom: 0px;
+    z-index: 4;
+    animation: fish-rocking 1s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+/* Stilsettingen av containeren som inneholder alle fiskene som hopper sammen med båten. */
+#jumping-fish {
+    position: absolute;
+    height: 80px;
+    width: 150px;
+    left: 500px;
+    bottom: -30px;
+    z-index: 2;
+    animation: fish-rocking 1s linear infinite alternate;
+}
+
+/* Stilsettingen av den grå fiskekroppen. */
+.fish-body1 {
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    background: #708090;
+    border-radius: 100px / 50px;
+}
+
+/* Stilsettingen av fiskens øye. */
+.fish-eye {
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    color: white;
+    left: 70px;
+    z-index: 1;
+}
+
+/* Stilsettingen av fiskens munn. */
+.fish-mouth {
+    position: absolute;
+    left: 81px;
+    bottom: 5px;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Stilsettingen av fiskens grønne halefinne. */
+.fish-tail1 {
+    width: 0;
+    height: 0;
+    left: -10px;
+    bottom: -8px;
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #2F4F4F;
+    border-bottom: 30px solid transparent;
+    z-index: -1;
+    animation: move-tail 1s linear infinite alternate;
+}
+
+/* Stilsettingen av fiskens grønne ryggfinne. */
+.back-fin1 {
+    width: 0;
+    height: 0;
+    left: 25px;
+    bottom: 35px;
+    transform: rotate(-5deg);
+    position: absolute;
+    border-bottom: 20px solid #2F4F4F;
+    border-right: 20px solid transparent;
+    z-index: -1;
+}
+
+/* Stilsettingen av den lakse-røde fiskekroppen. */
+.fish-body2 {
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    background: #FA8072;
+    border-radius: 100px / 50px;
+}
+
+/* Stilsettingen av fiskens beige halefinne. */
+.fish-tail2 {
+    width: 0;
+    height: 0;
+    left: -10px;
+    bottom: -8px;
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #FFDEAD;
+    border-bottom: 30px solid transparent;
+    z-index: -1;
+    animation: move-tail 1s linear infinite alternate;
+}
+
+/* Stilsettingen av fiskens beige ryggfinne. */
+.back-fin2 {
+    width: 0;
+    height: 0;
+    left: 25px;
+    bottom: 35px;
+    transform: rotate(-5deg);
+    position: absolute;
+    border-bottom: 20px solid #FFDEAD;
+    border-right: 20px solid transparent;
+    z-index: -1;
+}
+
+/* Stilsettingen av hus-containeren som inneholder døren og dørhåndtak. */
+#house {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background: #F4A460;
+    border: 1px solid black;
+    right: 0;
+    bottom: 150px;
+    z-index: 4;
+}
+
+/* Stilsettingen av døren, som fungerer som en link til neste side. */
+#door {
+    position: absolute;
+    width: 125px;
+    height: 175px;
+    background: #8B4513;
+    right: 12px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    bottom: 1px;
+    z-index: 4;
+
+}
+
+/* Striper i døren fra venstre mot høyre. */
+/* Stilsettingen til den første stripen i døren */
+#detail1 {
+    position: absolute;
+    height: 175px;
+    width: 1px;
+    border: 1px solid black;
+    z-index: 4;
+    left: 25px;
+}
+
+/* Stilsettingen til den andre stripen i døren */
+#detail2 {
+    position: absolute;
+    height: 175px;
+    width: 1px;
+    border: 1px solid black;
+    z-index: 4;
+    left: 50px;
+}
+
+/* Stilsettingen til den tredje stripen i døren */
+#detail3 {
+    position: absolute;
+    height: 175px;
+    width: 1px;
+    border: 1px solid black;
+    z-index: 4;
+    left: 75px;
+}
+
+/* Stilsettingen til den fjerde stripen i døren */
+#detail4 {
+    position: absolute;
+    height: 175px;
+    width: 1px;
+    border: 1px solid black;
+    z-index: 4;
+    left: 100px;
+}
+
+/* Stilsettingen av dørhåndtaket */
+#door-knob {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: gray;
+    border: 0.5px solid black;
+    right: 5px;
+    bottom: 70px;
+    z-index: 4;
+}
+
+/* Stilsettingen av bryggen. */
+#pier {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: gray;
+    right: 0;
+    bottom: 0px;
+    z-index: 4;
+    border: 1px solid black;
+}
+
+/* Stilsettingen av taket. */
+#roof {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 351px;
+    right: 0;
+    border-left: 77px solid transparent;
+    border-right: 77px solid transparent;
+    border-bottom: 70px solid #8B4513;
+    z-index: 3;
+}
+
+/* Stilsettingen av fortøyningsfestet. Stangen festet til bryggen. */
+#mooring-pole1 {
+    position: absolute;
+    height: 50px;
+    width: 20px;
+    background: black;
+    right: 250px;
+    bottom: 150px;
+    z-index: 3;
+}
+
+/* Stilsettingen av fortøyningsfestet. Stangen som er plassert på øvre del av
+   #mooring-pole1. */
+#mooring-pole2 {
+    position: absolute;
+    height: 10px;
+    width: 50px;
+    background: black;
+    right: 235px;
+    bottom: 180px;
+    z-index: 3;
+}
+
+/* Stilsettingen av checkboxen som er plassert på fortøyningsfestet, som trigger
+   animasjonen som drar båten mot bryggen. */
+#mooring-pole-check {
+    position: absolute;
+    opacity: 0;
+    height: 50px;
+    width: 35px;
+    right: 239.5px;
+    bottom: 150px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+/* Teksten som dukker opp i tekst-bobblen. */
+#text1 {
+    animation: text1 6s linear forwards;
+    z-index: 12;
+}
+
+#text2 {
+    animation: text2 6s linear forwards;
+    animation-delay: 6s;
+    z-index: 11;
+}
+
+#text3 {
+    animation: text3 6s linear forwards;
+    animation-delay: 12s;
+    z-index: 10;
+}
+
+#text4 {
+    animation: text4 12s linear forwards;
+    animation-delay: 18s;
+    z-index: 9;
+}
+
+#text5 {
+    animation: text5 12s linear forwards;
+    animation-delay: 30s;
+    z-index: 8;
+}
+
+#text6 {
+    animation: text6 12s linear forwards;
+    animation-delay: 42s;
+    z-index: 7;
+}
+
+#text7 {
+    animation: text6 12s linear forwards;
+    animation-delay: 54s;
+    z-index: 6;
+}
+
+
+#text8 {
+    animation: text6 12s linear forwards;
+    animation-delay: 66s;
+    z-index: 5;
+}
+
+
+/* Triggere */
+
+/* Trigger forandring av bakgrunnsfargen ved bruk av checkbox. */
+#night-mode:checked ~ #container-color {
+    animation: night-time 1s ease-in forwards;
+}
+
+/* Trigger forandring av fargen til skroget ved bruk av checkbox. */
+#night-mode:checked ~ #boat-container #boat-rotate #haul {
+    animation: night-boat 1s ease-in forwards;
+}
+
+/* Trigger forandring av fargen til solen ved bruk av checkbox. */
+#night-mode:checked ~ #sun {
+    animation-play-state: paused;
+    background: linear-gradient(#accbee, #e7f0fd);
+}
+
+/* Sky trigger, for å forandre farge på alle
+delene som utgjør selve skyen. For sky container 1*/
+#cloud1:hover .cloud-left,
+#cloud1:hover .cloud-center,
+#cloud1:hover .cloud-right {
+    background-image: radial-gradient(#cfd9df, #e2ebf0);
+}
+
+/* Sky trigger, for å forandre farge på alle
+delene som utgjør selve skyen. For sky container 2*/
+#cloud2:hover .cloud-left,
+#cloud2:hover .cloud-center,
+#cloud2:hover .cloud-right {
+    background-image: radial-gradient(#cfd9df, #e2ebf0);
+}
+
+/* Sky triggerr, for å forandre farge på alle
+delene som utgjør selve skyen. For sky container 3*/
+#cloud3:hover .cloud-left,
+#cloud3:hover .cloud-center,
+#cloud3:hover .cloud-right {
+    background-image: radial-gradient(#cfd9df, #e2ebf0);
+}
+
+/* Checkbox som trigger animasjonen bird-shot, slik at fuglen faller ned. */
+#check-bird1:checked ~ #bird1 {
+    animation: bird-shot 1s linear forwards;
+}
+
+#check-bird2:checked ~ #bird2 {
+    animation: bird-shot 1s linear forwards;
+}
+
+#check-bird3:checked ~ #bird3 {
+    animation: bird-shot 1s linear forwards;
+}
+
+#check-bird4:checked ~ #bird4 {
+    animation: bird-shot 1s linear forwards;
+}
+
+/* Trigger for å starte animasjonen som får båten til å hoppe og ta en backflip. */
+#boat-hover-effect:hover ~ #boat-container #boat-rotate {
+    animation: backflip1 1s linear forwards;
+}
+
+/* Trigger for å starte animasjonen som får fisken i #fish-container1 til å hoppe sammen med båten. */
+#boat-hover-effect:hover ~ #jumping-fish #fish-container1 {
+    animation: fish-jump 1s linear forwards;
+}
+
+/* Trigger for å starte animasjonen som får fisken i #fish-container2 til å hoppe sammen med båten. */
+#boat-hover-effect:hover ~ #jumping-fish #fish-container2 {
+    animation: fish-jump 1s linear forwards;
+    animation-delay: 0.2s;
+}
+
+/* Trigger for å starte animasjonen som får fisken i #fish-container3 til å hoppe sammen med båten. */
+#boat-hover-effect:hover ~ #jumping-fish #fish-container3 {
+    animation: fish-jump 1s linear forwards;
+    animation-delay: 0.3s;
+}
+
+/* Trigger for å starte animasjonen som får fisken i #fish-container4 til å hoppe sammen med båten. */
+#boat-hover-effect:hover ~ #jumping-fish #fish-container4 {
+    animation: fish-jump 1s linear forwards;
+    animation-delay: 0.4s;
+}
+
+/* Trigger for å starte animasjonen som får fisken i #fish-container5 til å hoppe sammen med båten. */
+#boat-hover-effect:hover ~ #jumping-fish #fish-container5 {
+    animation: fish-jump 1s linear forwards;
+    animation-delay: 0.45s;
+}
+
+/* Trigger der man holder over ocean div'en for å starte animasjonen som får fisken i 
+   fish-tricks-container1 til å hoppe. */
+#ocean:hover ~ #fish-tricks-container1 {
+    animation: fish-jump 1s linear forwards;
+}
+
+/* Trigger der man holder over ocean div'en for å starte animasjonen som får fisken i 
+   fish-tricks-container1 til å ta backflip. */
+#ocean:hover ~ #fish-tricks-container1 .fish-rotate {
+    animation: backflip-fish 0.6s linear forwards;
+    animation-delay: 0.2s;
+}
+
+/* Trigger der man holder over ocean div'en for å starte animasjonen som får fisken i 
+   fish-tricks-container2 til å hoppe og ta backflip. */
+#ocean:hover ~ #fish-tricks-container2 {
+    animation: fish-jump 1s linear forwards;
+    animation-delay: 1s;
+}
+
+/* Trigger der man holder over ocean div'en for å starte animasjonen som får fisken i 
+   fish-tricks-container2 til å ta backflip. */
+#ocean:hover ~ #fish-tricks-container2 .fish-rotate {
+    animation: backflip-fish 0.6s linear forwards;
+    animation-delay: 1s;
+}
+
+/* Trigger der man trykker på checkboxen som ligger i #mooring-pole1 og#mooring-pole2.
+   som starter animasjonen som drar båten mot bryggen. */
+#mooring-pole-check:checked ~ #boat-container {
+    animation: boat-slide 3s linear forwards;
+}
+
+/* Trigger der man trykker på checkboxen som ligger i #mooring-pole1 og#mooring-pole2.
+   som starter animasjonen som drar #boat-hover-effect mot bryggen. */
+#mooring-pole-check:checked ~ #boat-hover-effect {
+    animation: boat-slide 3s linear forwards;
+}
+
+
+/* Animasjoner */
+
+/* Animasjonen pulserer slik at den skiller seg ut. Den er plassert på toppen av #mountain2. */
+@keyframes pulse-mountain-buzz {
+    0% {
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(204, 169, 44, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+/* Animasjonen bytter farge fra default farge til en ny farge. */
+@keyframes night-boat {
+    100% {
+        box-shadow: 0px 100px 0px 0px #2F4F4F;
+    }
+}
+
+/* Animasjonen som forandrer bakgrunnsfargen fra dag til natt. */
+@keyframes night-time {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasjonen gir solen en pulserende effekt. */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animsjonen får skyene til å bevege seg over himmelen. */
+@keyframes cloud-move {
+    0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(1500px);
+    }
+}
+
+/* Animasjonen flytter fuglene fra deres nåværende posisjon, og flytter dem ned på siden
+   når de blir trigget. Gir en effekt av at fuglene blir skutt ned. */
+@keyframes bird-shot {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 600px);
+    }
+}
+
+/* Animsjonen får den venstre vingen til å se ut som den flyr. */
+@keyframes moveWing1 {
+    50% {
+        transform: skew(0deg, -10deg);
+    }
+
+    100% {
+        transform: skew(0deg, 10deg);
+    }
+}
+
+/* Animsjonen får den høyre vingen til å se ut som den flyr. */
+@keyframes moveWing2 {
+    50% {
+        transform: skew(0deg, 10deg);
+    }
+
+    100% {
+        transform: skew(0deg, -10deg);
+    }
+}
+
+/* Animasjonen skaper en effekt av at bølgene beveger seg. */
+@keyframes wave-movement {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animasjonen løfter båten opp og roterer den. Gir en effekt av at båten hopper og tar backflip. */
+@keyframes backflip1 {
+    50% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: -35px;
+        transform: rotate(-360deg);
+    }
+}
+
+/* Animasjonen løfter båten opp og ned. Gir en effekt i form av at båten hele tiden beveger seg i bølgene. */
+@keyframes boat-rocking {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+/* Animasjonen roterer fisken slik at de tar en backflip. */
+@keyframes backflip-fish {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Animsjonen får fiskens halefinne til å bevege seg. */
+@keyframes move-tail {
+    0% {
+        transform: rotateY(-50deg);
+    }
+
+    100% {
+        transform: rotateY(50deg);
+    }
+}
+
+/* Animasjonen får fisken til å hoppe. */
+@keyframes fish-jump {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(300px, -250px);
+    }
+
+    100% {
+        transform: translate(600px, 30px);
+    }
+}
+
+/* Animasjonen løfter fiksen opp og ned. Gir en effekt i form av at
+   det ser ut som fisken hele tiden beveger seg i bølgene. */
+@keyframes fish-rocking {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Animasjonen beveger på sidefinnen. */
+@keyframes side-fin-move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 5px);
+        transform: rotateX(40deg);
+    }
+}
+
+/* Animasjonen flytter fisken over himmelen. */
+@keyframes flying-fish-fly {
+    0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(1650px);
+    }
+}
+
+/* Animasjonen flytter fisken opp og ned slik at det ser ut som den bruker sidefinnen til å fly bortover. */
+@keyframes flying-fish-up-down {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 15px);
+    }
+}
+
+/* Animasjonen flytter båten og #boat-hover-effect bort til bryggen når den blir trigget. */
+@keyframes boat-slide {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(560px, 0px);
+    }
+}
+
+/* Animasjonen fader ut teksten etterhvert slik at man kan se teksten som ligger under. */
+@keyframes text1 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animasjonen fader ut teksten etterhvert slik at man kan se teksten som ligger under. */
+@keyframes text2 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animasjonen fader ut teksten etterhvert slik at man kan se teksten som ligger under. */
+@keyframes text3 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animasjonen fader ut teksten etterhvert slik at man kan se teksten som ligger under. */
+@keyframes text4 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animasjonen fader ut teksten etterhvert slik at man kan se teksten som ligger under. */
+@keyframes text5 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animasjonen fader ut teksten etterhvert slik at man kan se teksten som ligger under. */
+@keyframes text6 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animasjonen fader ut sammen med tekst boblen, ettersom det er den siste tekst animasjonen. */
+@keyframes text7 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

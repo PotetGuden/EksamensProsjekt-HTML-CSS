@@ -1,0 +1,118 @@
+<!-- KODET AV JOSTEIN ERIKSEN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Korridor</title>
+    <link rel="stylesheet" href="css/korridor7.css">
+</head>
+<body>
+    
+<div id="main-container">
+
+    <!-- ALLE VEGGER OG SISTE DØR -->
+    <div id="top-wall">
+        <div id="light-roof"></div>
+        <div id="light-roof2"></div>
+        <div id="light-roof3"></div>
+        <div id="light-roof4"></div>
+        <div id="light-roof5"></div>
+        <div id="light-roof6"></div>
+    </div>
+    <div id="right-wall"></div>
+    <div id="left-wall"></div>
+    <a href="bar.html">
+        <div id="back-wall">
+            <h1 id="bar-name">UNTZ UNTZ</h1>        
+            <div id="behind-last-door">
+                <div id="last-door">
+                    <div id="knob-back"></div>
+                    <div id="doorline"></div>
+                    <div id="window-backdoor"></div>    
+                </div>
+            </div>
+        </div>
+    </a>
+
+
+    <!-- TEPPE -->
+    <div id="carpet-floor-border"></div>
+    <div id="carpet-floor"></div>
+
+    <!-- DØRER -->
+
+    <div id="door1" class="doors"> 
+        <div id="knob1" class="door-knob"></div>
+        <div id="window1" class="windows"></div>                
+    </div>
+  
+    <div id="door2" class="doors">
+        <div id="knob2" class="door-knob"></div>
+        <div id="window2" class="windows"></div>
+    </div>
+    <div id="door3" class="doors">
+        <div id="knob3" class="door-knob"></div>
+        <div id="window3" class="windows"></div>
+    </div>
+    <div id="door4" class="doors">
+        <div id="knob4" class="door-knob"></div>
+        <div id="window4" class="windows"></div>
+    </div>
+    <div id="door5" class="doors">
+        <div id="knob5" class="door-knob"></div>
+        <div id="window5" class="windows"></div>
+    </div>
+    <div id="door6" class="doors">
+        <div id="knob6" class="door-knob"></div>
+        <div id="window6" class="windows"></div>
+    </div>
+    <div id="floor"></div>
+
+    <!-- ROLANDO -->
+    <div id="rolando-animation">
+
+        <!-- PAPIRBALL ANIMASJON (Må ha en trigger som er usynlig på arm2 fordi arm2 ligger bak rolando-body bildet, som fra før dekker over arm2, så man får ikke til hover effect)-->
+       
+        <div id="paper-ball">
+            <div id="part1"></div>
+            <div id="part2"></div>
+            <div id="part3"></div>
+            <div id="part4"></div>
+        </div>
+        
+        <img src="images/arm1.png" id="arm1" alt="arm 1">
+        <img src="images/arm2.png" id="arm2" alt="arm 2">  
+        <img src="images/profNoArms.png" id="rolando-body" alt="RolandoBody" usemap="#magishow-map">
+
+        <p id="text1" class="text-bubbles">
+            Og til slutt så er dette en av de få fasilitetene som vi kan tilby til våre studenter! 
+        </p>   
+            <!-- KOBEE ROP -->
+        <p id="text2" class="text-bubbles">KOBEEEEE!!!</p>
+
+        <map name="magishow-map">
+            <area shape="rect" coords="30,0,200,300" alt="overlay-click" href="bar.html">
+        </map>
+    </div>
+
+
+    <!-- SØPPELBØTTE -->
+    <div id="thrash-can-body"></div>
+    <div id="thrash-can-top"></div>
+
+    <!-- KLOKKE -->
+    <div id="whole-clock">
+        <div id="pins"></div>
+        <div id="pin1"></div>
+        <div id="pin2"></div>
+        <div id="pin3"></div>
+    </div>
+
+   
+
+</div>
+
+</body>
+</html>

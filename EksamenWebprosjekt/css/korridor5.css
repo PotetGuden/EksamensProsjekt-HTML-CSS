@@ -1,0 +1,732 @@
+/* KODET AV JOSTEIN ERIKSEN */
+body{
+    background-color: #163030;
+    
+}
+
+.text-bubbles{
+    position: absolute;
+    background-color:white;
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 6px);
+    font-family: fantasy;
+    width: 240px;
+    text-align: center;
+}
+
+#main-container {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: grey;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+#left-wall{
+    position: absolute;
+    border-bottom: 830px solid rgb(92, 92, 92);
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    height: 0px;
+    width: 200px;
+    top: -55px;
+    left:-575px;
+    transform: rotate(90deg);
+}
+
+#right-wall{
+    position: absolute;
+    border-bottom: 830px solid rgb(92, 92, 92);
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    height: 0px;
+    width: 200px;
+    top: -55px;
+    right:-575px;
+    transform: rotate(-90deg);
+}
+
+#top-wall{
+    position: absolute;
+    border-bottom: 260px solid rgb(58, 46, 46);
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    height: 0px;
+    width: 200px;
+    left: 140px;
+    transform: rotate(180deg);
+}
+
+#floor{
+    position: absolute;
+    border-bottom: 260px solid rgb(229, 182, 137);
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    height: 0px;
+    width: 200px;
+    bottom: 0px;
+    left: 140px;
+}
+
+#back-wall{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(71, 70, 70);
+    position: absolute;
+    top: 260px;
+    left: 540px;
+}
+
+.doors{
+    position: absolute;
+    background-color:rgb(114, 52, 52);
+    height: 500px;
+    border: 1px solid black;
+}
+
+#door1{
+    width: 150px;
+    bottom:-20px;
+    left: 50px;
+    transform: skewY(9deg);
+}
+
+
+#door2{
+    width: 115px;
+    bottom:-50px;
+    left: 250px;
+    transform: skewY(9deg);
+}
+
+#door3{
+    width: 90px;
+    bottom:-72px;
+    left: 400px;
+    transform: skewY(9deg);
+    animation: doorLight 2s infinite; 
+    animation-delay: 5s;
+}
+
+#door4{
+    width: 150px;
+    bottom:-20px;
+    right: 50px;
+    transform: skewY(-9deg);
+}
+
+#door5{
+    width: 115px;
+    bottom:-50px;
+    right: 250px;
+    transform: skewY(-9deg);
+}
+
+#door6{
+    width: 90px;
+    bottom:-72px;
+    right: 400px;
+    transform: skewY(-9deg);
+}
+
+.door-knob{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+}
+
+#knob1{
+    width: 15px;
+    height: 15px;
+    top: 300px;
+    left: 35px;
+}
+
+#knob2{
+    top: 210px;
+    left: 25px;
+    width: 13px;
+    height: 13px;
+
+}
+
+#knob3{
+    width: 10px;
+    height: 10px;
+    left: 20px;
+    top: 140px;
+}
+
+#knob4{
+    width: 15px;
+    height: 15px;
+    top: 300px;
+    right: 35px;
+    transform: rotate(180deg);
+}
+
+#knob5{
+    top: 210px;
+    right: 25px;
+    width: 13px;
+    height: 13px;
+    transform: rotate(180deg);
+}
+
+#knob6{
+    width: 10px;
+    height: 10px;
+    right: 20px;
+    top: 140px;
+    transform: rotate(180deg);
+}
+
+.windows{
+    height: 75px;
+    position: absolute; 
+
+}
+
+#window1{
+    width: 100px;
+    border-bottom: 120px solid rgb(53, 48, 48);
+    border-right: 23px solid transparent ;
+    left: 55px;
+    top: -20px;
+    transform: rotate(90deg); 
+}
+
+#window2{
+    border-bottom: 90px solid rgb(53, 48, 48);
+    border-right: 19px solid transparent;
+    width: 70px;
+    left: 53px;
+    top: -25px;
+    transform: rotate(90deg); 
+}
+
+#window3{
+    border-bottom: 70px solid rgb(53, 48, 48);
+    border-right: 18px solid transparent;
+    width: 40px;
+    left: 55px;
+    top: -30px;
+    transform: rotate(90deg); 
+}
+
+#window4{
+    width: 100px;
+    border-bottom: 120px solid rgb(53, 48, 48);
+    border-left: 23px solid transparent;
+    right: 55px;
+    top: -20px;
+    transform: rotate(-90deg); 
+}
+
+#window5{
+    border-bottom: 90px solid rgb(53, 48, 48);
+    border-left: 19px solid transparent;
+    width: 70px;
+    right: 53px;
+    top: -25px;
+    transform: rotate(-90deg); 
+}
+
+#window6{
+    border-bottom: 70px solid rgb(53, 48, 48);
+    border-left: 18px solid transparent;
+    width: 40px;
+    right: 55px;
+    top: -30px;
+    transform: rotate(-90deg); 
+}
+
+#last-door{
+    width: 120px;
+    height: 140px;
+    position: absolute;
+    background-color: rgb(58, 37, 37);
+    left: -1px;
+    top: -1px;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border: 1px solid black;
+    z-index: 0;
+
+    /*
+    animation: swing-door-left 1s forwards;
+    animation-delay: 2s; */
+    
+}
+
+
+
+#behind-last-door{
+    width: 120px;
+    height: 140px;
+    position: absolute;
+    background-color: white;
+    left: 40px;
+    bottom: 0px;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border: 1px solid black;
+    animation: discoLight 3s infinite linear;
+
+}
+
+#knob-back{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 70px;
+    left: 10px;
+}
+
+#bar-name{
+    position: absolute;
+    left: 28px;
+    top: -15px;
+    font-family: fantasy;
+    background-image: linear-gradient( #101830 , #0d5c05);
+    padding: 5px;
+    border-radius: 30%;
+    z-index: 2;
+    animation: untzUntz 1s infinite linear;
+    color: rgb(126, 126, 126);
+}
+
+
+
+#window-backdoor{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid black;
+    top: 10px;
+    left: 30px;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+    animation: discoLight 3s infinite linear;
+
+}
+
+#doorline{
+    width: 1px;
+    height: 140px;
+    background: black;
+    position: absolute;
+    left: 59px;
+}
+
+
+#light-roof{
+    width: 50px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 140px;
+    left: 200px;
+    position: absolute;
+    border: 7px solid black;
+    box-shadow: 0px 0px 27px 2px white;
+}
+
+#light-roof2{
+    width: 50px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 140px;
+    left: -50px;
+    position: absolute;
+    border: 7px solid black;
+    box-shadow: 0px 0px 27px 2px white;
+}
+
+#light-roof3{
+    width: 50px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 60px;
+    left: 150px;
+    position: absolute;
+    border: 7px solid black;
+    box-shadow: 0px 0px 27px 2px white;
+    transform: scale(0.8);
+}
+
+#light-roof4{
+    width: 50px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 60px;
+    left: -10px;
+    position: absolute;
+    border: 7px solid black;
+    box-shadow: 0px 0px 27px 2px white;
+    transform: scale(0.8);
+}
+
+#light-roof5{
+    width: 50px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 220px;
+    left: 240px;
+    position: absolute;
+    border: 7px solid black;
+    box-shadow: 0px 0px 27px 2px white;
+    transform: scale(1.2);
+}
+
+#light-roof6{
+    width: 50px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 220px;
+    left: -90px;
+    position: absolute;
+    border: 7px solid black;
+    box-shadow: 0px 0px 27px 2px white;
+    transform: scale(1.2);
+}
+
+#rolando{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+}
+
+
+
+#text1{
+    position: absolute;
+}
+
+#rolando-animation{
+    position:absolute;
+    width: 350px;
+    height: 350px;
+    top: 350px;
+    left:740px;
+    z-index: 2;
+    transform: scale(0.8);
+    animation: rolandoWalk 2s linear forwards;
+    animation-delay: 2s; 
+
+}
+
+#rolando-body{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+   
+}
+
+#arm1{
+    position: absolute;
+    top: 125px;
+    left: 95px;
+    animation: arm1Animation 1s linear forwards;
+    animation-delay: 4s;
+}
+
+#arm2{
+    position: absolute;
+    top: 130px;
+    left: 190px;
+}
+
+
+
+#whole-clock{
+    width: 100px;
+    height: 100px;
+    background: rgb(211, 199, 199);
+    border-radius: 50%;
+    border: 5px solid black;
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    transform: rotateY(40deg);
+}
+
+#pin1{
+    width: 4px;
+    height: 45px;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 49px;
+    animation: clockAnimation 3600s infinite linear;
+}
+
+#pin2{
+    width: 4px;
+    height: 25px;
+    background: black;
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    transform: rotate(45deg);
+}
+
+#pin3{
+    width: 2px;
+    height: 45px;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 49px;
+    animation: clockAnimation 60s infinite linear;
+}
+
+
+
+#pins{
+    width: 110px;
+    height: 90px;
+    background: rgb(211, 199, 199);
+    border-radius: 50%;
+    border: 2px dotted black;
+    position: absolute;
+    transform: rotateY(40deg);
+    top: 3px;
+    left: -8px;
+}
+
+#carpet-floor-border{
+    position: absolute;
+    border-bottom: 260px solid rgb(0, 0, 0);
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    height: 0px;
+    width: 50px;
+    bottom: 0px;
+    left: 315px;
+    top: 470px;
+    z-index: 1;
+}
+
+
+#carpet-floor{
+    position: absolute;
+    border-bottom: 260px solid rgb(214, 67, 57);
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    height: 0px;
+    width: 50px;
+    bottom: 0px;
+    left: 315px;
+    top: 475px;
+    z-index: 1;
+}
+
+#thrash-can-body{
+    width: 35px;
+    height: 65px;
+    background: grey;
+    position: absolute;
+    top: 410px;
+    left: 520px;
+    transform: skewY(-10deg);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#thrash-can-top{
+    width: 33px;
+    height: 12px;
+    background: white;
+    position: absolute;
+    top: 408px;
+    left: 520px;
+    transform: skewY(-5deg);
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+#kobe{
+    position: absolute;
+    transform: skewX(20deg) rotate(20deg); 
+    top: 100px;
+    left: 200px;
+    font-size: 70px;
+    color: white;
+}
+
+#text2{
+    opacity: 0;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes swing-door-left {
+    0% {
+        transform: rotateY(0);
+        transform-origin: right;
+    }
+    100% {
+        transform: rotateY(90deg);
+        transform-origin: right;
+    }
+}
+
+
+@keyframes doorLight{
+    50%{
+        filter: drop-shadow(0 -6px 10px rgb(209, 240, 139));
+    }
+    
+}
+
+@keyframes untzUntz{
+    50%{
+        box-shadow: 0px 0px 20px 10px rgba(13, 167, 46, 0.87);
+    }
+}
+
+@keyframes discoLight{
+    0%{
+        background: red;
+        box-shadow: 0px 0px 27px 2px red;
+    }
+    20%{
+        background: blue;
+        box-shadow: 0px 0px 27px 2px blue;
+    }
+    40%{
+        background: green;
+        box-shadow: 0px 0px 27px green;
+    }
+    60%{
+        background: white;
+        box-shadow: 0px 0px 27px 2px white;
+    }
+    80%{
+        background: grey;
+        box-shadow: 0px 0px 27px 2px grey;
+    }
+    100%{
+        background: yellow;
+        box-shadow: 0px 0px 27px 2px yellow;
+    }
+}
+
+@keyframes rolandoWalk{
+    20%{
+        transform: skewX(3deg);
+        top: 335px;
+        transform: scale(0.76);
+    } 
+    40%{
+        transform: skewX(3deg);
+        top: 325px;
+        transform: scale(0.72);
+    } 
+    60%{
+        transform: skewX(3deg);
+        top: 315px;
+        transform: scale(0.68);
+    } 
+    80%{
+        transform: skewX(3deg);
+        top: 305px;
+        transform: scale(0.64);
+    }
+    10%{
+        transform: skewX(-3deg);
+        top: 325px;
+        transform: scale(0.78);
+    } 
+    30%{
+        transform: skewX(-3deg);
+        top: 315;
+        transform: scale(0.74);
+    } 
+    50%{
+        transform: skewX(-3deg);
+        top: 305px;
+        transform: scale(0.70);
+    } 
+    70%{
+        transform: skewX(-3deg);
+        top: 295px;
+        transform: scale(0.66);
+    }
+    100%{
+        left:320px;
+        top: 290px;
+        transform: scale(0.6);
+    }
+}
+
+@keyframes arm1Animation{
+    100%{
+        transform: rotate(80deg);
+        top:90px;
+    }
+}
+
+@keyframes clockAnimation{
+    0%{
+        top: 5px;
+        left: 49px;
+    }
+    12.5%{
+        top: 15px;
+        left: 60px;
+        transform: rotate(45deg);
+    }
+    25%{
+        top:25px;
+        left: 70px;
+        transform: rotate(90deg);
+    }
+    37.5%{
+        top:40px;
+        left: 69px;
+        transform: rotate(135deg);
+    }
+    50%{
+        top:50px;
+        left: 50px;
+        transform: rotate(180deg);
+    }
+    62.5%{
+        top: 40px;
+        left: 35px;
+        transform: rotate(225deg);
+    }
+    75%{
+        top: 28px;
+        left: 24px;
+        transform: rotate(270deg);
+    }
+    87.5%{
+        top: 11px;
+        left: 30px;
+        transform: rotate(315deg);
+    }
+    100%{
+        top: 5px;
+        left: 49px;
+        transform: rotate(360deg);
+    }
+}
+
+
