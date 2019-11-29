@@ -2,6 +2,9 @@ LES HER FØRST!!!!!!!!!!!
 
 Dette er eksamensprosjektet jeg hadde i Kreativt Webprosjekt H2019
 
+Hvis du vil se igjennom hvordan ting ser ut, start med å åpne filen "forside.html", det er første siden og i prosjektet vårt har vi valgt å lage guide igjennom universitetet vi har kommet på, derfor vil det som regel være en/fler animasjoner som vil skje før en dør/portal/lignende vil åpne seg og man kan trykke på den for å komme til neste side, det finnes også litt hover/active/onclick effekter på de fleste sidene, absolutt ALT er "tegnet" i css utenom noen få karakterer vi har brukt, se bilde mappen hvis du er nysgjerrig.
+I hver HTML/CSS fil vil det stå hvem som kodet hva, helt øverst i hvert dokument (vi hadde bare 3-4 dager på oss og brukte alt for mye tid på å lage det her, så kunne vært vi kunne ha kommentert enda bedre, men det skal som regel se ganske greit ut å skjønne.)
+
 //INFORMASJON OM PROSJEKTET
 
 TEMA: Universitet - Gjør noe kreativt med det.
