@@ -1,10 +1,10 @@
 LES HER FØRST!!!!!!!!!!!
 
-Dette er eksamensprosjektet jeg hadde i webprosjekt H2019
+Dette er eksamensprosjektet jeg hadde i Kreativt Webprosjekt H2019
 
 //INFORMASJON OM PROSJEKTET
 
-TEMA: Universitet
+TEMA: Universitet - Gjør noe kreativt med det.
 
 Vi var en gruppe på 7 personer (alle gjorde forsovet ikke like mye..)
 
