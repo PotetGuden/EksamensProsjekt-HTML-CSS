@@ -69,9 +69,14 @@ box-sizing
 *Inkluderer alle variasjoner av egenskapene, for eksempel padding-left, background-size osv.
 
 //Tillatte CSS-velgere
-  Alle velgere er tillatt
+
+Alle velgere er tillatt
+
 //Annet
-  Du skal bruke HTML5
-  All CSS skal ligge i eksternt stilark
-  Løsningen skal tilpasset Chrome
+
+Du skal bruke HTML5
+
+All CSS skal ligge i eksternt stilark
+
+Løsningen skal tilpasset Chrome
 
